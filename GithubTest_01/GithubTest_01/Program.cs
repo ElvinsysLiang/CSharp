@@ -7,6 +7,7 @@ namespace GithubTest_01
         static void Main(string[] args)
         {
             Console.WriteLine("The first github test with CSharp");
+            Console.WriteLine("Am I success?");
             Console.ReadKey();
         }
     }
