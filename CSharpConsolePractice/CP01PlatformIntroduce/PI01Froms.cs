@@ -35,9 +35,24 @@
  *  
  *  项目之下，各类的命名方式
  *  如   PI01Froms
- *       PI02HelloWorld
  * 
  */
+
+/*
+ *  例程编号：
+ *  描述：
+ *  说明：
+ */
+//例程：
+
+
+public class Demo
+{
+    public static void main(String[] args)
+    {
+        System.out.println("这只是一个例程模板");//这只是一个例程模板
+    }
+}
 
 using System;
 using System.Collections.Generic;
