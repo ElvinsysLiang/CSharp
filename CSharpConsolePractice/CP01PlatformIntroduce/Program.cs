@@ -28,7 +28,7 @@
 //引用命名空间。注意，后面要带分号
 using System;
 
-//命名空间
+//项目名称（命名空间）
 namespace CP01PlatformIntroduce
 {
     //Program类，里面一般是程序入口处
@@ -41,7 +41,7 @@ namespace CP01PlatformIntroduce
             Console.WriteLine("Hello World!");
             //Console.ReadKey();
             //以前如果不加ReadKey会因为控制台一闪而过，现在没必要加
-            #region <<一些快捷键>>
+            #region <<快捷键 & 一些需要注意的小技巧？>>
             /*
              *  F6：生成解决方案
              *  F5：编译并运行程序
@@ -55,7 +55,9 @@ namespace CP01PlatformIntroduce
              *  Shift+End 、Shift+Home
              *  F1：转到帮助文档（需要安装Help Viewer）
              *  折叠冗余代码：#region 和 #endregion
-            */
+             *  当一个解决方案里面有多个项目的时候，需要设置解决方案属性，把“启动项目”设为“当前选定内容”。
+             *  微软输入法试用\来作为顿号
+             */
             #endregion
         }
     }
