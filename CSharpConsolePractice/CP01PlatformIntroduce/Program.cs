@@ -18,15 +18,11 @@
 //----------------------------------------------------------------*/
 #endregion
 
-/*
- *  例程编号：CS001
- *  描述：CSharp中最简单的一个HelloWorld程序
- *  说明：
- */
-//例程：
+
 
 //引用命名空间。注意，后面要带分号
 using System;
+using CP00Forms;
 
 //项目名称（命名空间）
 namespace CP01PlatformIntroduce
@@ -37,28 +33,28 @@ namespace CP01PlatformIntroduce
         //Main函数，程序入口
         static void Main(string[] args)
         {
-            //以下语句的作用是在控制台打印字符串Hello World
-            Console.WriteLine("Hello World!");
-            //Console.ReadKey();
-            //以前如果不加ReadKey会因为控制台一闪而过，现在没必要加
-            #region <<快捷键 & 一些需要注意的小技巧？>>
             /*
-             *  F6：生成解决方案
-             *  F5：编译并运行程序
-             *  Ctrl+Z：撤销
-             *  Ctrl+S：保存(一定要经常保存！)
-             *  Ctrl+J：快速弹出智能提示
-             *  Ctrl+K+D：快速对齐代码
-             *  Ctrl+K+C：注释所选代码
-             *  Ctrl+K+U：取消对所选代码的注释
-             *  Ctrl+L：删除一行
-             *  Shift+End 、Shift+Home
-             *  F1：转到帮助文档（需要安装Help Viewer）
-             *  折叠冗余代码：#region 和 #endregion
-             *  当一个解决方案里面有多个项目的时候，需要设置解决方案属性，把“启动项目”设为“当前选定内容”。
-             *  微软输入法试用\来作为顿号
+             *  例程编号：CS001（实现用例）
+             *  说明：
+             *      （设计用例————PI01HelloWorld）
+             *      简单的Hello World程序
+             *  摘要：
+             *      在控制台打印Hello World，演示简单的Hello World程序的写法
              */
-            #endregion
+            Forms.Rule("CS001");
+            PI01HelloWorld.ShowHelloWorld();
+
+            /*
+             *  例程编号：CS002（实现用例）
+             *  说明：
+             *      （设计用例————PI03Comments）
+             *      用于理解文档注释的使用方法
+             *  摘要：
+             *      在控制台上输出两个整形变量相加的结果
+             */
+            Forms.Rule("CS002");
+            PI03Comments.Show(PI03Comments.MyAdd(1, 2));
+
         }
     }
 }
