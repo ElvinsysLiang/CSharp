@@ -31,6 +31,24 @@ namespace CP02Types
          *  例程编号：CS003（设计用例）
          *  说明：
          *      输出常量（字符串、字符、整数、小数、金钱、布尔、二进制、八进制、十六进制)
+         *  变量：
+         *      修饰符           变量类型     变量名      说明
+         *      public const    string      v003Str     
+         *      public const    char        v003Ch      
+         *      public const    byte        v003BytNum  
+         *      public const    shotr       v003ShoNum
+         *      public const    int         v003IntNum
+         *      public const    long        v003LonNum
+         *      public const    float       v003FloNum
+         *      public const    double      v003DouNum
+         *      public const    decimal     v003DecNum
+         *      public const    bool        v003Flag
+         *      public const    int         v003IntNum2
+         *      public const    int         v003IntNum3
+         *      public const    int         v003IntNum4
+         *  方法：
+         *      修饰符          返回值类型  方法名         参数1    参数2
+         *      public static   void       ShowConstants  void
          */
         public const string v003Str = "this is a string";
         public const char v003Ch = 'a';

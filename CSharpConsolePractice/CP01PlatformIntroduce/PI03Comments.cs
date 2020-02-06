@@ -31,6 +31,10 @@ namespace CP01PlatformIntroduce
          *  说明：
          *      文档注释的试用方法。
          *      若要生成.XML文档，可在项目属性--->生成里面设置
+         *  方法：
+         *      修饰符          返回值类型  方法名  参数1    参数2
+         *      public static   int        MyAdd   int      int
+         *      public static   void       Show    int
          */
         /// <summary>
         /// 该方法用来计算两个整数之和

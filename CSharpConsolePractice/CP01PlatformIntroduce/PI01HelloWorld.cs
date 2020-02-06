@@ -31,6 +31,9 @@ namespace CP01PlatformIntroduce
          *  说明：
          *      简单的Hello World程序
          *      以前如果不加ReadKey会因为控制台一闪而过，现在没必要加
+         *  方法：
+         *      修饰符          返回值类型     方法名            参数1
+         *      public static   void          ShowHelloWorld    void
          */
         /// <summary>
         /// 在控制台打印Hello World字符串
