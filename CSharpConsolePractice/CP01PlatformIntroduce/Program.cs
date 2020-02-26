@@ -34,15 +34,26 @@ namespace CP01PlatformIntroduce
         static void Main(string[] args)
         {
             /*
-             *  例程编号：CS001（实现用例）
-             *  说明：
-             *      （设计用例————PI01HelloWorld）
-             *      简单的Hello World程序
+             *  例程编号：CS001
              *  摘要：
-             *      在控制台打印Hello World，演示简单的Hello World程序的写法
+             *      简单的Hello World程序
+             *  要点：
+             *      1)在控制台上输出字符串，并换行
+             *          Console.WriteLine("...");
+             *      2)只是输出字符串，不换行
+             *          Console.Write("...");
+             *      3)在以前得visual studio中需要加上Console.ReadKey()方法，用来等待
+             *      用户的输入，以防止终端一闪而过，在visual studio2019中并不需要。
+             *  步骤：
+             *      1)在控制台打印Hello World，演示简单的Hello World程序的写法
+             *  变量：
+             *      修饰符     变量类型         变量名     备注
+             *  方法：
+             *      修饰符         返回值类型    方法名            参数类型    备注
+             *      public static   void        ShowHelloWorld    null
              */
-            Forms.Rule("CS001");
-            PI01HelloWorld.ShowHelloWorld();
+            Forms.Line("CS001");
+            PI01HelloWorld.CS001();
 
             /*
              *  例程编号：CS002（实现用例）

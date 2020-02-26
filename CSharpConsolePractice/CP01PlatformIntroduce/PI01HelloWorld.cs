@@ -27,16 +27,33 @@ namespace CP01PlatformIntroduce
     class PI01HelloWorld
     {
         /*
-         *  例程编号：CS001（设计用例）
-         *  说明：
+         *  例程编号：CS001
+         *  摘要：
          *      简单的Hello World程序
-         *      以前如果不加ReadKey会因为控制台一闪而过，现在没必要加
+         *  要点：
+         *      1)在控制台上输出字符串，并换行
+         *          Console.WriteLine("...");
+         *      2)只是输出字符串，不换行
+         *          Console.Write("...");
+         *      3)在以前得visual studio中需要加上Console.ReadKey()方法，用来等待
+         *      用户的输入，以防止终端一闪而过，在visual studio2019中并不需要。
+         *  步骤：
+         *      1)在控制台打印Hello World，演示简单的Hello World程序的写法
+         *  变量：
+         *      修饰符     变量类型         变量名     备注
          *  方法：
-         *      修饰符          返回值类型     方法名            参数1
-         *      public static   void          ShowHelloWorld    void
+         *      修饰符         返回值类型    方法名            参数类型    备注
+         *      public static   void        ShowHelloWorld    null
          */
         /// <summary>
-        /// 在控制台打印Hello World字符串
+        /// 简单的Hello World程序
+        /// </summary>
+        public static void CS001()
+        {
+            ShowHelloWorld();
+        }
+        /// <summary>
+        /// 在控制台打印Hello World，演示简单的Hello World程序的写法
         /// </summary>
         public static void ShowHelloWorld()
         {

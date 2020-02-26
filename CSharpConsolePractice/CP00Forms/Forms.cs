@@ -39,33 +39,26 @@
  */
 
 /*
- *  例程编号：CS001（实现用例）
- *  说明：
- *      （设计用例————？）
- *      需要说明的内容，知识点
+ *  例程编号：CS001
  *  摘要：
- *      该方法实现的功能效果
- */
-
-/*
- *  例程编号：CS001（设计用例）
- *  说明：
- *      需要说明的内容，知识点
+ *      简单的Hello World程序
+ *  要点：
+ *      1)
+ *  步骤：
+ *      1)
  *  变量：
- *      修饰符      变量类型    变量名    说明
+ *      修饰符     变量类型         变量名     备注
  *  方法：
- *      修饰符      返回值类型     方法名     参数1  参数2
+ *      修饰符         返回值类型    方法名            参数类型    备注
  */
-/// <summary>
-/// 该方法实现的功能效果
-/// </summary>
-/// <param name="a">something message</param>
-/// <param name="b">something message</param>
-/// <returns>something message</returns>
 
 /*
  *  用到的变量：
- *  v+例程编号？
+ *  v+例程编号+变量名
+ */
+/*
+ *  用到的方法名：
+ *  M+例程编号+方法名
  */
 
 /*
@@ -97,10 +90,10 @@
  */
 
 /*
- *  结构：
- *     1.先参照课件PPT
- *     2.按照JavaSE的脉络，
- *     3.再对照C#官方参考文件
+ *  参考材料：
+ *     1.课堂例程
+ *     2.课件练习
+ *     3.JavaSE练习
  */
 
 using System;
@@ -115,7 +108,7 @@ namespace CP00Forms
         /// 例程分割线
         /// </summary>
         /// <param name="str">例程编号</param>
-        public static void Rule(string str)
+        public static void Line(string str)
         {
             Console.WriteLine("-------------------------------------------------------------------");
             Console.WriteLine("--------------------开始测试  " + str + "  的实现用例--------------------");
