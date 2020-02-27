@@ -26,11 +26,12 @@ namespace CP01PlatformIntroduce
 {
     class PI01HelloWorld
     {
+        #region CS001：简单的Hello World程序
         /*
          *  例程编号：CS001
          *  摘要：
          *      简单的Hello World程序
-         *  要点：
+         *  说明：
          *      1）在控制台上输出字符串，并换行
          *          Console.WriteLine("...");
          *      2）只是输出字符串，不换行
@@ -60,5 +61,6 @@ namespace CP01PlatformIntroduce
             Console.WriteLine("Hello World.");
             //Console.ReadKey();
         }
+        #endregion
     }
 }

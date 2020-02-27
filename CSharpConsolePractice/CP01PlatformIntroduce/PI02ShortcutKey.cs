@@ -26,11 +26,12 @@ namespace CP01PlatformIntroduce
 {
     class PI02ShortcutKey
     {
+        #region CS002：C#中常用到的快捷键
         /*
          *  例程编号：CS002
          *  摘要：
          *      C#中常用到的快捷键
-         *  要点：
+         *  说明：
          *      F6：生成解决方案
          *      F5：编译并运行程序
          *      F12：查看某个方法定义的地方
@@ -54,9 +55,13 @@ namespace CP01PlatformIntroduce
          *      修饰符         返回值类型    方法名            参数类型    备注
          *      public static   void        ShowHelloWorld    null
          */
+        /// <summary>
+        /// C#中常用到的快捷键
+        /// </summary>
         public static void CS002()
         {
 
         }
+        #endregion
     }
 }
