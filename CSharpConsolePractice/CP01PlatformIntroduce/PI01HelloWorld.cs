@@ -10,7 +10,7 @@
 * CLR 版本 ：4.0.30319.42000
 * 作    者 ：Elvinsys
 * 创建时间 ：2020-02-05 14:09:34
-* 更新时间 ：2020-02-05 14:09:34
+* 更新时间 ：2020-02-27 09:14:57
 * 版 本 号 ：v1.0.0.0
 *******************************************************************
 * Copyright @ Elvinsys 2020. All rights reserved.
@@ -31,14 +31,14 @@ namespace CP01PlatformIntroduce
          *  摘要：
          *      简单的Hello World程序
          *  要点：
-         *      1)在控制台上输出字符串，并换行
+         *      1）在控制台上输出字符串，并换行
          *          Console.WriteLine("...");
-         *      2)只是输出字符串，不换行
+         *      2）只是输出字符串，不换行
          *          Console.Write("...");
-         *      3)在以前得visual studio中需要加上Console.ReadKey()方法，用来等待
+         *      3）在以前得visual studio中需要加上Console.ReadKey()方法，用来等待
          *      用户的输入，以防止终端一闪而过，在visual studio2019中并不需要。
          *  步骤：
-         *      1)在控制台打印Hello World，演示简单的Hello World程序的写法
+         *      1）在控制台打印Hello World，演示简单的Hello World程序的写法
          *  变量：
          *      修饰符     变量类型         变量名     备注
          *  方法：
