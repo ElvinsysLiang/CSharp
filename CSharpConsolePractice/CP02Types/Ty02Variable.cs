@@ -139,8 +139,31 @@ namespace CP02Types
         }
         #endregion
 
-
-
+        #region CS007：两个变量的区别
+        /*
+         *  例程编号：CS007
+         *  摘要：
+         *      两个变量的区别
+         *  说明：
+         *      1）以下两行代码的区别：
+         *          float f1 = 12.34f;
+         *          float f2 = (float)12.34;
+         *  步骤：
+         *      1）
+         *  变量：
+         *      修饰符     变量类型      变量名     备注
+         *  方法：
+         *      修饰符     返回值类型    方法名     参数类型    备注
+         */
+         /// <summary>
+         /// 两个变量的区别
+         /// </summary>
+         public static void CS007()
+        {
+            float f1 = 12.34f;//12.34f是float数据，再赋值给float的f1
+            float f2 = (float)12.34;//12.34是double数据，要赋值给float的f2必须进行强制类型转换
+        }
+        #endregion
 
         #region CS008：用键盘输入小明买的衣服和裤子的件数，并算出总价
         /*
@@ -215,6 +238,34 @@ namespace CP02Types
             decimal result = (decimal)((tshNum * 35.00 + troNum * 120.00) * 0.88);
             Console.WriteLine("小明买了" + tshNum + "件的T恤和" + troNum + "条裤子，" +
                 "经理给打8.8折后，最后小明应付" + result + "元");
+        }
+        #endregion
+
+        #region CS009：两行代码的正确性
+        /*
+         *  例程编号：CS009
+         *  摘要：
+         *      两行代码的正确性
+         *  说明：
+         *      1）以下两行代码的区别
+         *          byte a = 3, b = 4;
+         *          byte c = a + b;
+         *          byte d = 3 + 4;
+         *  步骤：
+         *      1）
+         *  变量：
+         *      修饰符     变量类型         变量名     备注
+         *  方法：
+         *      修饰符         返回值类型    方法名            参数类型    备注
+         */
+         public static void CS009()
+        {
+            byte a = 3, b = 4;
+            //byte c = a + b;//错误
+            //a和b虽然都是byte型，但两者相加后的结果会自动转换成int，
+            //再赋值给byte的c，需要进行强制类型转换
+            byte d = 3 + 4;//正确
+            //常量的3和4相加后，结果会根据d的类型自动作调整
         }
         #endregion
     }

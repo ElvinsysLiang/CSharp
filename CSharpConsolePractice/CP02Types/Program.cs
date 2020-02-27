@@ -115,7 +115,7 @@ namespace CP02Types
              *      修饰符         返回值类型    方法名            参数类型    备注
              */
             #endregion
-            Forms.Line("CS005");
+            Forms.Line("CS006");
             Ty02Variable.CS006();
 
             #region CS007：两个变量的区别
@@ -127,7 +127,6 @@ namespace CP02Types
              *      1）以下两行代码的区别：
              *          float f1 = 12.34f;
              *          float f2 = (float)12.34;
-             *      2）第一个变量本来就是float型，第二个变量原来是double型，强转陈float型
              *  步骤：
              *      1）
              *  变量：
@@ -136,6 +135,8 @@ namespace CP02Types
              *      修饰符     返回值类型    方法名     参数类型    备注
              */
             #endregion
+            Forms.Line("CS007");
+            Ty02Variable.CS007();
 
             #region CS008：用键盘输入小明买的衣服和裤子的件数，并算出总价
             /*
@@ -143,16 +144,16 @@ namespace CP02Types
              *  摘要：
              *      用键盘输入小明买的衣服和裤子的件数，并算出总价
              *  说明：
-             *      商店的T恤35元/件，裤子120元/条，小明买了T恤和裤子，
-             *      经理给打8.8折，最后应该给多少钱咧？
+             *      1）商店的T恤35元/件，裤子120元/条，小明买了T恤和裤子，
+             *         经理给打8.8折，最后应该给多少钱咧？
              *  步骤：
              *      1）从键盘上获取小明买到的T恤数量
              *      2）从键盘上获取小明买到的裤子数量
              *      3）用键盘输入小明买的衣服和裤子数量，并算出总价
              *  变量：
              *      修饰符             变量类型     变量名           说明
-             *      private static     int         v007TshNum      T-Shirt的数量 
-             *      private static     int         v007TroNum      Trouser的数量
+             *                         int         tshNum      T-Shirt的数量 
+             *                         int         troNum      Trouser的数量
              *  方法：
              *      修饰符         返回值类型     方法名     参数1类型     参数2类型
              *      public static   int         GetTshNum   void
@@ -162,6 +163,29 @@ namespace CP02Types
             #endregion
             Forms.Line("CS008");
             Ty02Variable.CS008();
+
+            #region CS009：两行代码的正确性
+            /*
+             *  例程编号：CS009
+             *  摘要：
+             *      两行代码的正确性
+             *  说明：
+             *      1）以下两行代码的区别
+             *          byte a = 3, b = 4;
+             *          byte c = a + b;
+             *          byte d = 3 + 4;
+             *  步骤：
+             *      1）
+             *  变量：
+             *      修饰符     变量类型         变量名     备注
+             *  方法：
+             *      修饰符         返回值类型    方法名            参数类型    备注
+             */
+            #endregion
+            Forms.Line("CS009");
+            Ty02Variable.CS009();
+
+
         }
     }
 }
