@@ -35,7 +35,7 @@ namespace CP02Types
              *  摘要：
              *      在控制台上打印各种类型的常量
              */
-            Forms.Rule("CS003");
+            Forms.Line("CS003");
             Ty01Constant.ShowConstants();
 
             /*
@@ -48,7 +48,7 @@ namespace CP02Types
              *  摘要：
              *      在控制台上打印各种类型的常量
              */
-            Forms.Rule("CS004");
+            Forms.Line("CS004");
             Ty02Variable.ShowScales();
 
             /*
@@ -63,7 +63,7 @@ namespace CP02Types
              *      3）数据溢出的解决方法一：把其中参与运算的变量强制类型转换
              *      4）数据溢出的解决方法二：把其中参与运算的常量强制类型转换
              */
-            Forms.Rule("CS005");
+            Forms.Line("CS005");
             Ty02Variable.ShowIntMax();
             Ty02Variable.ShowIntMaxPlusOne();
             Ty02Variable.M005Method1();
@@ -90,7 +90,7 @@ namespace CP02Types
              *  摘要：
              *      用键盘输入小明买的衣服和裤子的件数，并算出总价
              */
-            Forms.Rule("CS007");
+            Forms.Line("CS007");
             Ty02Variable.Account();
         }
     }
