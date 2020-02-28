@@ -27,9 +27,9 @@ namespace CP02Types
 {
     class Ty01Constant
     {
-        #region CS004：在控制台上打印各类型的常量
+        #region CP02_01：在控制台上打印各类型的常量
         /*
-         *  例程编号：CS004
+         *  例程编号：CP02_01
          *  摘要：
          *      在控制台上打印各种类型的常量
          *  说明：
@@ -59,7 +59,7 @@ namespace CP02Types
         /// <summary>
         /// 在控制台上打印各种类型的常量
         /// </summary>
-        public static void CS004()
+        public static void CP02_01()
         {
             const string str = "this is a string";
             const char ch = 'a';

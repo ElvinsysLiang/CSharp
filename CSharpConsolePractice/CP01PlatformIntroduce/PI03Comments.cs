@@ -26,9 +26,9 @@ namespace CP01PlatformIntroduce
 {
     class PI03Comments
     {
-        #region CS003：注释的用法，变量方法命名方式，两数相加
+        #region CP01_03：注释的用法，变量方法命名方式，两数相加
         /*
-         *  例程编号：CS003
+         *  例程编号：CP01_03
          *  摘要：
          *      注释的用法，变量方法命名方式，两数相加
          *  说明：
@@ -64,7 +64,7 @@ namespace CP01PlatformIntroduce
         /// <summary>
         /// 注释的用法，变量方法命名方式，两数相加
         /// </summary>
-        public static void CS003()
+        public static void CP01_03()
         {
             int var1, var2, result;
             Console.WriteLine("Please input two integerNum:");

@@ -27,9 +27,9 @@ namespace CP02Types
     {
         static void Main(string[] args)
         {
-            #region CS004：在控制台上打印各类型的常量
+            #region CP02_01：在控制台上打印各类型的常量
             /*
-             *  例程编号：CS004
+             *  例程编号：CP02_01
              *  摘要：
              *      在控制台上打印各种类型的常量
              *  说明：
@@ -57,12 +57,12 @@ namespace CP02Types
              *      public static   void       ShowConstants  
              */
             #endregion
-            //Forms.Line("CS004");
-            //Ty01Constant.CS004();
+            //Forms.Line("CP02_01");
+            //Ty01Constant.CP02_01();
 
-            #region CS005：在控制台上打印各类型变量的取值范围
+            #region CP02_02：在控制台上打印各类型变量的取值范围
             /*
-             *  例程编号：CS005
+             *  例程编号：CP02_02
              *  摘要：
              *      输出各类型变量的取值范围（字符串、字符、整数、小数、金钱)
              *  说明：
@@ -93,12 +93,12 @@ namespace CP02Types
              *      
              */
             #endregion
-            //Forms.Line("CS005");
-            //Ty02Variable.CS005();
+            //Forms.Line("CP02_02");
+            //Ty02Variable.CP02_02();
 
-            #region CS006：数据溢出的影响，以及解决方法
+            #region CP02_03：数据溢出的影响，以及解决方法
             /*
-             *  例程编号：CS006
+             *  例程编号：CP02_03
              *  摘要：
              *      数据溢出的影响，以及解决方法
              *  说明：
@@ -115,12 +115,12 @@ namespace CP02Types
              *      修饰符         返回值类型    方法名            参数类型    备注
              */
             #endregion
-            //Forms.Line("CS006");
-            //Ty02Variable.CS006();
+            //Forms.Line("CP02_03");
+            //Ty02Variable.CP02_03();
 
-            #region CS007：两行代码的区别
+            #region CP02_04：两行代码的区别
             /*
-             *  例程编号：CS007
+             *  例程编号：CP02_04
              *  摘要：
              *      两行代码的区别
              *  说明：
@@ -135,12 +135,12 @@ namespace CP02Types
              *      修饰符     返回值类型    方法名     参数类型    备注
              */
             #endregion
-            //Forms.Line("CS007");
-            //Ty02Variable.CS007();
+            //Forms.Line("CP02_04");
+            //Ty02Variable.CP02_04();
 
-            #region CS008：用键盘输入小明买的衣服和裤子的件数，并算出总价
+            #region CP02_05：用键盘输入小明买的衣服和裤子的件数，并算出总价
             /*
-             *  例程编号：CS008
+             *  例程编号：CP02_05
              *  摘要：
              *      用键盘输入小明买的衣服和裤子的件数，并算出总价
              *  说明：
@@ -161,12 +161,12 @@ namespace CP02Types
              *      public static   void        Account     void
              */
             #endregion
-            //Forms.Line("CS008");
-            //Ty02Variable.CS008();
+            //Forms.Line("CP02_05");
+            //Ty02Variable.CP02_05();
 
-            #region CS009：两行代码的正确性
+            #region CP02_06：两行代码的正确性
             /*
-             *  例程编号：CS009
+             *  例程编号：CP02_06
              *  摘要：
              *      两行代码的正确性
              *  说明：
@@ -182,12 +182,12 @@ namespace CP02Types
              *      修饰符         返回值类型    方法名            参数类型    备注
              */
             #endregion
-            //Forms.Line("CS009");
-            //Ty02Variable.CS009();
+            //Forms.Line("CP02_06");
+            //Ty02Variable.CP02_06();
 
-            #region CS010：修改错误代码
+            #region CP02_07：修改错误代码
             /*
-             *  例程编号：CS010
+             *  例程编号：CP02_07
              *  摘要：
              *      修改错误代码
              *  说明：
@@ -201,12 +201,12 @@ namespace CP02Types
              *      修饰符         返回值类型    方法名            参数类型    备注
              */
             #endregion
-            //Forms.Line("CS010");
-            //Ty02Variable.CS010();
+            //Forms.Line("CP02_07");
+            //Ty02Variable.CP02_07();
 
-            #region CS011：看结果写代码
+            #region CP02_08：看结果写代码
             /*
-             *  例程编号：CS011
+             *  例程编号：CP02_08
              *  摘要：
              *      看结果写代码
              *  说明：
@@ -222,12 +222,12 @@ namespace CP02Types
              *      修饰符         返回值类型    方法名            参数类型    备注
              */
             #endregion
-            //Forms.Line("CS011");
-            //Ty02Variable.CS011();
+            //Forms.Line("CP02_08");
+            //Ty02Variable.CP02_08();
 
-            #region CS012：两个整数相除
+            #region CP02_09：两个整数相除
             /*
-             *  例程编号：CS012
+             *  例程编号：CP02_09
              *  摘要：
              *      两个整数相除
              *  说明：
@@ -240,8 +240,8 @@ namespace CP02Types
              *      修饰符         返回值类型    方法名            参数类型    备注
              */
             #endregion
-            //Forms.Line("CS012");
-            //Ty02Variable.CS012();
+            //Forms.Line("CP02_09");
+            //Ty02Variable.CP02_09();
         }
     }
 }

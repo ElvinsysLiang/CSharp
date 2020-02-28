@@ -33,9 +33,9 @@ namespace CP01PlatformIntroduce
         //Main函数，程序入口
         static void Main(string[] args)
         {
-            #region CS001：简单的Hello World程序
+            #region CP01_01：简单的Hello World程序
             /*
-             *  例程编号：CS001
+             *  例程编号：CP01_02
              *  摘要：
              *      简单的Hello World程序
              *  说明：
@@ -54,12 +54,12 @@ namespace CP01PlatformIntroduce
              *      public static   void        ShowHelloWorld    null
              */
             #endregion
-            Forms.Line("CS001");
-            PI01HelloWorld.CS001();
+            //Forms.Line("CP01_01");
+            //PI01HelloWorld.CP01_01();
 
-            #region CS002：C#中常用到的快捷键
+            #region CP01_02：C#中常用到的快捷键
             /*
-             *  例程编号：CS002
+             *  例程编号：CP01_02
              *  摘要：
              *      C#中常用到的快捷键
              *  说明：
@@ -86,12 +86,12 @@ namespace CP01PlatformIntroduce
              *      修饰符         返回值类型    方法名    参数类型    备注
              */
             #endregion
-            Forms.Line("CS002");
-            PI02ShortcutKey.CS002();
+            //Forms.Line("CP01_02");
+            //PI02ShortcutKey.CP01_02();
 
-            #region CS003：注释的用法，变量方法命名方式，两数相加
+            #region CP01_03：注释的用法，变量方法命名方式，两数相加
             /*
-             *  例程编号：CS003
+             *  例程编号：CP01_03
              *  摘要：
              *      注释的用法，变量方法命名方式，两数相加
              *  说明：
@@ -125,8 +125,29 @@ namespace CP01PlatformIntroduce
              *      public static   void        ShowResult  int
              */
             #endregion
-            Forms.Line("CS003");
-            PI03Comments.CS003();
+            //Forms.Line("CP01_03");
+            //PI03Comments.CP01_03();
+
+            #region CP01_04：控制台格式化输出
+            /*
+             *  例程编号：CP01_04
+             *  摘要：
+             *      控制台格式化输出
+             *  说明：
+             *      1）格式：Console.WriteLine("我叫{0}，今年{1}岁了",string,string);
+             *  步骤：
+             *      1）简单的格式化输出代码
+             *  变量：
+             *      修饰符     变量类型         变量名     备注
+             *                  string          name
+             *                  int             age
+             *  方法：
+             *      修饰符         返回值类型     方法名            参数类型1   参数类型2    备注
+             *                      void        ShowInfo         string     int
+             */
+            #endregion
+            //Forms.Line("CP01_04");
+            //PI04ConsoleFormat.CP01_04();
         }
     }
 }

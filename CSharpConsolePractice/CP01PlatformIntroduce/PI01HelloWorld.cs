@@ -26,9 +26,9 @@ namespace CP01PlatformIntroduce
 {
     class PI01HelloWorld
     {
-        #region CS001：简单的Hello World程序
+        #region CP01_01：简单的Hello World程序
         /*
-         *  例程编号：CS001
+         *  例程编号：CP01_02
          *  摘要：
          *      简单的Hello World程序
          *  说明：
@@ -49,7 +49,7 @@ namespace CP01PlatformIntroduce
         /// <summary>
         /// 简单的Hello World程序
         /// </summary>
-        public static void CS001()
+        public static void CP01_01()
         {
             ShowHelloWorld();
         }

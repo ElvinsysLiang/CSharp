@@ -26,12 +26,15 @@ namespace CP01PlatformIntroduce
 {
     class PI02ShortcutKey
     {
-        #region CS002：C#中常用到的快捷键
+        #region CP01_02：C#中常用到的快捷键
         /*
-         *  例程编号：CS002
+         *  例程编号：CP01_02
          *  摘要：
          *      C#中常用到的快捷键
          *  说明：
+         *      Ctrl+M+M:展开或者折叠当前方法
+         *      Ctrl+tab：切换标签
+         *      Ctrl+F4:关闭当前标签
          *      F6：生成解决方案
          *      F5：编译并运行程序
          *      F12：查看某个方法定义的地方
@@ -58,7 +61,7 @@ namespace CP01PlatformIntroduce
         /// <summary>
         /// C#中常用到的快捷键
         /// </summary>
-        public static void CS002()
+        public static void CP01_02()
         {
 
         }

@@ -25,9 +25,9 @@ namespace CP03Operator
 {
     public class Op01Arith
     {
-        #region CS013：5种基本数学运算符（+，-，*，/，%）
+        #region CP03_01：5种基本数学运算符（+，-，*，/，%）
         /*
-         *  例程编号：CS013
+         *  例程编号：CP03_01
          *  摘要：
          *      5种数学运算符（+，-，*，/，%）
          *  说明：
@@ -42,7 +42,7 @@ namespace CP03Operator
         /// <summary>
         /// 5种数学运算符（+，-，*，/，%）
         /// </summary>
-        public static void CS013()
+        public static void CP03_01()
         {
             //Console.WriteLine("1 + 1 = " + 1 + 1);
             //错误，会把1+1解析成字符串
@@ -56,9 +56,9 @@ namespace CP03Operator
         }
         #endregion
 
-        #region CS014：另外2种数学运算符：自增和自减运算符（++，--）
+        #region CP03_02：另外2种数学运算符：自增和自减运算符（++，--）
         /*
-         *  例程编号：CS014
+         *  例程编号：CP03_02
          *  摘要：
          *      另外2种数学运算符：自增和自减运算符（++，--）
          *  说明：
@@ -74,7 +74,7 @@ namespace CP03Operator
         /// <summary>
         /// 另外2种数学运算符：自增和自减运算符（++，--）
         /// </summary>
-        public static void CS014()
+        public static void CP03_02()
         {
             int var = 0;
             Console.WriteLine("现在的  var = " + var);
@@ -92,9 +92,9 @@ namespace CP03Operator
         }
         #endregion
 
-        #region CS015：自增自减练习：看代码猜数值
+        #region CP03_03：自增自减练习：看代码猜数值
         /*
-         *  例程编号：CS015
+         *  例程编号：CP03_03
          *  摘要：
          *      自增自减练习：看代码猜数值
          *  说明：
@@ -115,7 +115,7 @@ namespace CP03Operator
         /// <summary>
         /// 自增自减练习：看代码猜数值
         /// </summary>
-        public static void CS015()
+        public static void CP03_03()
         {
             int num1 = 3;
             int num2 = 4;
@@ -126,9 +126,9 @@ namespace CP03Operator
         }
         #endregion
 
-        #region CS0016：用来连接字符串的加法运算符
+        #region CP03_04：用来连接字符串的加法运算符
         /*
-         *  例程编号：CS016
+         *  例程编号：CP03_04
          *  摘要：
          *      用来连接字符串的加法运算符
          *  说明：
@@ -149,7 +149,7 @@ namespace CP03Operator
         /// <summary>
         /// 用来连接字符串的加法运算符
         /// </summary>
-        public static void CS016()
+        public static void CP03_04()
         {
             string name = "兔子";
             Console.WriteLine("你的名字叫" + "李博士");
@@ -159,57 +159,7 @@ namespace CP03Operator
         }
         #endregion
 
-        #region CS017：控制台格式化输出
-        /*
-         *  例程编号：CS017
-         *  摘要：
-         *      控制台格式化输出
-         *  说明：
-         *      1）格式：Console.WriteLine("我叫{0}，今年{1}岁了",string,string);
-         *      2）调换占位符的位置的影响("num1 = {1}, num2 = {0}, num3 = {2}", num1, num2)
-         *          //多少个占位符就要给多少个数据，否则虽然能过编译，但执行的时候会抛异常
-         *  步骤：
-         *      1）简单的格式化输出代码
-         *      2）调换占位符的位置
-         *  变量：
-         *      修饰符     变量类型         变量名     备注
-         *                  string          name
-         *                  int             age
-         *  方法：
-         *      修饰符         返回值类型     方法名            参数类型1   参数类型2    备注
-         *                      void        ShowInfo         string     int
-         *                      void        PositionChange      int     int   
-         */
-        /// <summary>
-        /// 控制台格式化输出
-        /// </summary>
-        public static void CS017()
-        {
-            ShowInfo("兔子", 3);
-            PositionChange(1, 2);
-        }
-
-        /// <summary>
-        /// 简单的格式输出代码
-        /// </summary>
-        /// <param name="name">名字</param>
-        /// <param name="age">岁数</param>
-        public static void ShowInfo(string name, int age)
-        {
-            Console.WriteLine("我叫{0}，今年{1}岁了。", name, age);
-        }
-
-        /// <summary>
-        /// 调换占位符的位置
-        /// </summary>
-        /// <param name="num1">0号位置的数据</param>
-        /// <param name="num2">1号位置的数据</param>
-        public static void PositionChange(int num1, int num2)
-        {
-            //Console.WriteLine("num1 = {1}, num2 = {0}, num3 = {2}", num1, num2);
-            Console.WriteLine("num1 = {1}, num2 = {0}", num1, num2);
-        }
-        #endregion
+        
 
     }
 }

@@ -26,9 +26,9 @@ namespace CP02Types
 {
     class Ty02Variable
     {
-        #region CS005：在控制台上打印各类型变量的取值范围
+        #region CP02_02：在控制台上打印各类型变量的取值范围
         /*
-         *  例程编号：CS005
+         *  例程编号：CP02_02
          *  摘要：
          *      输出各类型变量的取值范围（字符串、字符、整数、小数、金钱)
          *  说明：
@@ -61,7 +61,7 @@ namespace CP02Types
         /// <summary>
         /// 输出各类型变量的取值范围（字符串、字符、整数、小数、金钱)
         /// </summary>
-        public static void CS005()
+        public static void CP02_02()
         {
             Console.WriteLine("byte型变量的取值范围是：" + byte.MinValue + "~" + byte.MaxValue);
             Console.WriteLine("short型变量的取值范围是：" + short.MinValue + "~" + short.MaxValue);
@@ -74,9 +74,9 @@ namespace CP02Types
         }
         #endregion
 
-        #region CS006：数据溢出的影响，以及解决方法
+        #region CP02_03：数据溢出的影响，以及解决方法
         /*
-         *  例程编号：CS006
+         *  例程编号：CP02_03
          *  摘要：
          *      数据溢出的影响，以及解决方法
          *  说明：
@@ -95,7 +95,7 @@ namespace CP02Types
         /// <summary>
         /// 数据溢出的影响，以及解决方法
         /// </summary>
-        public static void CS006()
+        public static void CP02_03()
         {
             ShowIntMax();
             ShowIntMaxPlusOne();
@@ -139,9 +139,9 @@ namespace CP02Types
         }
         #endregion
 
-        #region CS007：两行代码的区别
+        #region CP02_04：两行代码的区别
         /*
-         *  例程编号：CS007
+         *  例程编号：CP02_04
          *  摘要：
          *      两行代码的区别
          *  说明：
@@ -158,16 +158,16 @@ namespace CP02Types
         /// <summary>
         /// 两个变量的区别
         /// </summary>
-        public static void CS007()
+        public static void CP02_04()
         {
             float f1 = 12.34f;//12.34f是float数据，再赋值给float的f1
             float f2 = (float)12.34;//12.34是double数据，要赋值给float的f2必须进行强制类型转换
         }
         #endregion
 
-        #region CS008：用键盘输入小明买的衣服和裤子的件数，并算出总价
+        #region CP02_05：用键盘输入小明买的衣服和裤子的件数，并算出总价
         /*
-         *  例程编号：CS008
+         *  例程编号：CP02_05
          *  摘要：
          *      用键盘输入小明买的衣服和裤子的件数，并算出总价
          *  说明：
@@ -190,7 +190,7 @@ namespace CP02Types
         /// <summary>
         /// 用键盘输入小明买的衣服和裤子的件数，并算出总价
         /// </summary>
-        public static void CS008()
+        public static void CP02_05()
         {
             int tshNum, troNum;
             tshNum = GetTshNum();
@@ -241,9 +241,9 @@ namespace CP02Types
         }
         #endregion
 
-        #region CS009：两行代码的正确性
+        #region CP02_06：两行代码的正确性
         /*
-         *  例程编号：CS009
+         *  例程编号：CP02_06
          *  摘要：
          *      两行代码的正确性
          *  说明：
@@ -258,7 +258,7 @@ namespace CP02Types
          *  方法：
          *      修饰符         返回值类型    方法名            参数类型    备注
          */
-         public static void CS009()
+        public static void CP02_06()
         {
             byte a = 3, b = 4;
             //byte c = a + b;//错误
@@ -269,9 +269,9 @@ namespace CP02Types
         }
         #endregion
 
-        #region CS010：修改错误代码
+        #region CP02_07：修改错误代码
         /*
-         *  例程编号：CS010
+         *  例程编号：CP02_07
          *  摘要：
          *      修改错误代码
          *  说明：
@@ -284,10 +284,10 @@ namespace CP02Types
          *  方法：
          *      修饰符         返回值类型    方法名            参数类型    备注
          */
-         /// <summary>
-         /// 修改错误代码
-         /// </summary>
-         public static void CS010()
+        /// <summary>
+        /// 修改错误代码
+        /// </summary>
+        public static void CP02_07()
         {
             byte a = 130;//在C#中，byte的取值范围是0~255，因此没毛病
             //但在Java中，byte的取值范围是-128~127，必须通过强转来解决
@@ -295,9 +295,9 @@ namespace CP02Types
         }
         #endregion
 
-        #region CS011：看结果写代码
+        #region CP02_08：看结果写代码
         /*
-         *  例程编号：CS011
+         *  例程编号：CP02_08
          *  摘要：
          *      看结果写代码
          *  说明：
@@ -312,10 +312,10 @@ namespace CP02Types
          *  方法：
          *      修饰符         返回值类型    方法名            参数类型    备注
          */
-         /// <summary>
-         /// 看结果写代码
-         /// </summary>
-         public static void CS011()
+        /// <summary>
+        /// 看结果写代码
+        /// </summary>
+        public static void CP02_08()
         {
             //helloa1
             Console.WriteLine("hello" + 'a' + 1);
@@ -328,9 +328,9 @@ namespace CP02Types
         }
         #endregion
 
-        #region CS012：两个整数相除
+        #region CP02_09：两个整数相除
         /*
-         *  例程编号：CS012
+         *  例程编号：CP02_09
          *  摘要：
          *      两个整数相除
          *  说明：
@@ -342,7 +342,7 @@ namespace CP02Types
          *  方法：
          *      修饰符         返回值类型    方法名            参数类型    备注
          */
-         public static void CS012()
+        public static void CP02_09()
         {
             Console.WriteLine("3/4 = " + 3 / 4);//结果是一个整数
             Console.WriteLine("(float)3/4 = " + (float)3 / 4);//结果是一个小数
