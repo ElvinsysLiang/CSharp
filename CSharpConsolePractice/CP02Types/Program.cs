@@ -57,8 +57,8 @@ namespace CP02Types
              *      public static   void       ShowConstants  
              */
             #endregion
-            Forms.Line("CS004");
-            Ty01Constant.CS004();
+            //Forms.Line("CS004");
+            //Ty01Constant.CS004();
 
             #region CS005：在控制台上打印各类型变量的取值范围
             /*
@@ -93,8 +93,8 @@ namespace CP02Types
              *      
              */
             #endregion
-            Forms.Line("CS005");
-            Ty02Variable.CS005();
+            //Forms.Line("CS005");
+            //Ty02Variable.CS005();
 
             #region CS006：数据溢出的影响，以及解决方法
             /*
@@ -115,16 +115,16 @@ namespace CP02Types
              *      修饰符         返回值类型    方法名            参数类型    备注
              */
             #endregion
-            Forms.Line("CS006");
-            Ty02Variable.CS006();
+            //Forms.Line("CS006");
+            //Ty02Variable.CS006();
 
-            #region CS007：两个变量的区别
+            #region CS007：两行代码的区别
             /*
              *  例程编号：CS007
              *  摘要：
-             *      两个变量的区别
+             *      两行代码的区别
              *  说明：
-             *      1）以下两行代码的区别：
+             *      1）两行代码的区别：
              *          float f1 = 12.34f;
              *          float f2 = (float)12.34;
              *  步骤：
@@ -135,8 +135,8 @@ namespace CP02Types
              *      修饰符     返回值类型    方法名     参数类型    备注
              */
             #endregion
-            Forms.Line("CS007");
-            Ty02Variable.CS007();
+            //Forms.Line("CS007");
+            //Ty02Variable.CS007();
 
             #region CS008：用键盘输入小明买的衣服和裤子的件数，并算出总价
             /*
@@ -161,8 +161,8 @@ namespace CP02Types
              *      public static   void        Account     void
              */
             #endregion
-            Forms.Line("CS008");
-            Ty02Variable.CS008();
+            //Forms.Line("CS008");
+            //Ty02Variable.CS008();
 
             #region CS009：两行代码的正确性
             /*
@@ -182,10 +182,66 @@ namespace CP02Types
              *      修饰符         返回值类型    方法名            参数类型    备注
              */
             #endregion
-            Forms.Line("CS009");
-            Ty02Variable.CS009();
+            //Forms.Line("CS009");
+            //Ty02Variable.CS009();
 
+            #region CS010：修改错误代码
+            /*
+             *  例程编号：CS010
+             *  摘要：
+             *      修改错误代码
+             *  说明：
+             *      1）修改错误代码
+             *          byte a = 130;
+             *  步骤：
+             *      1）
+             *  变量：
+             *      修饰符     变量类型         变量名     备注
+             *  方法：
+             *      修饰符         返回值类型    方法名            参数类型    备注
+             */
+            #endregion
+            //Forms.Line("CS010");
+            //Ty02Variable.CS010();
 
+            #region CS011：看结果写代码
+            /*
+             *  例程编号：CS011
+             *  摘要：
+             *      看结果写代码
+             *  说明：
+             *      1）helloa1
+             *      2）98hello
+             *      3）5 + 555
+             *      4）10 = 5 + 5
+             *  步骤：
+             *      1）
+             *  变量：
+             *      修饰符     变量类型         变量名     备注
+             *  方法：
+             *      修饰符         返回值类型    方法名            参数类型    备注
+             */
+            #endregion
+            //Forms.Line("CS011");
+            //Ty02Variable.CS011();
+
+            #region CS012：两个整数相除
+            /*
+             *  例程编号：CS012
+             *  摘要：
+             *      两个整数相除
+             *  说明：
+             *      1）两个整数相除的结果也是整数，要得到小数的结果，必须把其中一个整数强转为浮点型
+             *  步骤：
+             *      1）
+             *  变量：
+             *      修饰符     变量类型         变量名     备注
+             *  方法：
+             *      修饰符         返回值类型    方法名            参数类型    备注
+             */
+            #endregion
+            //Forms.Line("CS012");
+            //Ty02Variable.CS012();
         }
     }
 }

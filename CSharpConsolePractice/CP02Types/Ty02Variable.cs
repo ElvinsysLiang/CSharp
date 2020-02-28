@@ -139,13 +139,13 @@ namespace CP02Types
         }
         #endregion
 
-        #region CS007：两个变量的区别
+        #region CS007：两行代码的区别
         /*
          *  例程编号：CS007
          *  摘要：
-         *      两个变量的区别
+         *      两行代码的区别
          *  说明：
-         *      1）以下两行代码的区别：
+         *      1）两行代码的区别：
          *          float f1 = 12.34f;
          *          float f2 = (float)12.34;
          *  步骤：
@@ -155,10 +155,10 @@ namespace CP02Types
          *  方法：
          *      修饰符     返回值类型    方法名     参数类型    备注
          */
-         /// <summary>
-         /// 两个变量的区别
-         /// </summary>
-         public static void CS007()
+        /// <summary>
+        /// 两个变量的区别
+        /// </summary>
+        public static void CS007()
         {
             float f1 = 12.34f;//12.34f是float数据，再赋值给float的f1
             float f2 = (float)12.34;//12.34是double数据，要赋值给float的f2必须进行强制类型转换
@@ -266,6 +266,86 @@ namespace CP02Types
             //再赋值给byte的c，需要进行强制类型转换
             byte d = 3 + 4;//正确
             //常量的3和4相加后，结果会根据d的类型自动作调整
+        }
+        #endregion
+
+        #region CS010：修改错误代码
+        /*
+         *  例程编号：CS010
+         *  摘要：
+         *      修改错误代码
+         *  说明：
+         *      1）修改错误代码
+         *          byte a = 130;
+         *  步骤：
+         *      1）
+         *  变量：
+         *      修饰符     变量类型         变量名     备注
+         *  方法：
+         *      修饰符         返回值类型    方法名            参数类型    备注
+         */
+         /// <summary>
+         /// 修改错误代码
+         /// </summary>
+         public static void CS010()
+        {
+            byte a = 130;//在C#中，byte的取值范围是0~255，因此没毛病
+            //但在Java中，byte的取值范围是-128~127，必须通过强转来解决
+            Console.WriteLine("byte a = " + a);
+        }
+        #endregion
+
+        #region CS011：看结果写代码
+        /*
+         *  例程编号：CS011
+         *  摘要：
+         *      看结果写代码
+         *  说明：
+         *      1）helloa1
+         *      2）98hello
+         *      3）5 + 555
+         *      4）10 = 5 + 5
+         *  步骤：
+         *      1）
+         *  变量：
+         *      修饰符     变量类型         变量名     备注
+         *  方法：
+         *      修饰符         返回值类型    方法名            参数类型    备注
+         */
+         /// <summary>
+         /// 看结果写代码
+         /// </summary>
+         public static void CS011()
+        {
+            //helloa1
+            Console.WriteLine("hello" + 'a' + 1);
+            //98hello
+            Console.WriteLine(98+"hello");
+            //5 + 555
+            Console.WriteLine(5 + " + " + 555);
+            //10 = 5 + 5
+            Console.WriteLine(5 + 5 + " = 5 + 5");
+        }
+        #endregion
+
+        #region CS012：两个整数相除
+        /*
+         *  例程编号：CS012
+         *  摘要：
+         *      两个整数相除
+         *  说明：
+         *      1）两个整数相除的结果也是整数，要得到小数的结果，必须把其中一个整数强转为浮点型
+         *  步骤：
+         *      1）
+         *  变量：
+         *      修饰符     变量类型         变量名     备注
+         *  方法：
+         *      修饰符         返回值类型    方法名            参数类型    备注
+         */
+         public static void CS012()
+        {
+            Console.WriteLine("3/4 = " + 3 / 4);//结果是一个整数
+            Console.WriteLine("(float)3/4 = " + (float)3 / 4);//结果是一个小数
         }
         #endregion
     }
