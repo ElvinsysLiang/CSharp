@@ -112,9 +112,30 @@ namespace CP03Operator
              *      修饰符         返回值类型    方法名            参数类型    备注
              */
             #endregion
-            Forms.Line("CS016");
-            Op01Arith.CS016();
-            
+            //Forms.Line("CS016");
+            //Op01Arith.CS016();
+
+            #region CS017：控制台格式化输出
+            /*
+             *  例程编号：CS017
+             *  摘要：
+             *      控制台格式化输出
+             *  说明：
+             *      1）格式：Console.WriteLine("我叫{0}，今年{1}岁了",string,string);
+             *  步骤：
+             *      1）简单的格式化输出代码
+             *  变量：
+             *      修饰符     变量类型         变量名     备注
+             *                  string          name
+             *                  int             age
+             *  方法：
+             *      修饰符         返回值类型     方法名            参数类型1   参数类型2    备注
+             *                      void        ShowInfo         string     int
+             */
+            #endregion
+            Forms.Line("CS017");
+            Op01Arith.CS017();
+
         }
     }
 }
