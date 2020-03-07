@@ -159,7 +159,80 @@ namespace CP03Operator
         }
         #endregion
 
-        
+        #region CP03_05：交换两个整形变量值的三种方法
+        /*
+         *  例程编号：CP03_05
+         *  摘要：
+         *      交换两个整形变量值的三种方法
+         *  说明：
+         *      1）  用第三个变量交换数据
+         *      2）  只用原来的两个变量交换数据
+         *  步骤：
+         *      1）  用第三个变量交换数据
+         *      2）  只用原有的两个变量交换数据，方法一
+         *      3）  只用原有的两个变量交换数据，方法二
+         *  变量：
+         *      修饰符     变量类型      变量名       备注
+         *                  int         iVar1       第一个整形变量
+         *                  int         iVar2       第二个整形变量
+         *                  int         iTemp       用于暂存数据的变量
+         *  方法：
+         *      修饰符         返回值类型    方法名            参数类型    备注
+         *                      void        Method_1        void        
+         *                      void        Method_2        void
+         *                      void        Method_3        void
+         */
+        /// <summary>
+        /// 交换两个整形变量值的三种方法
+        /// </summary>
+        public static void CP03_05()
+        {
+            Console.WriteLine("测试第一种方法，通过第三个变量交换数据");
+            Method_01();
+            Console.WriteLine("测试第二种方法，只用原有的两个变量交换数据");
+            Method_02();
+            Console.WriteLine("测试第三种方法，只用原有的两个变量交换数据");
+            Method_03();
+        }
+        /// <summary>
+        /// 用第三个变量交换数据
+        /// </summary>
+        public static void Method_01()
+        {
+            int iVar1 = 10, iVar2 = 20, iTemp;
+            Console.WriteLine("现在的数值：iVar1 = {0}, iVar2 = {1}", iVar1, iVar2);
+            iTemp = iVar1;
+            iVar1 = iVar2;
+            iVar2 = iTemp;
+            Console.WriteLine("改变后的数值：iVar1 = {0}, iVar2 = {1}", iVar1, iVar2);
+        }
+        /// <summary>
+        /// 只用原有的两个变量交换数据，方法一
+        /// </summary>
+        public static void Method_02()
+        {
+            int iVar1 = 10, iVar2 = 20;
+            Console.WriteLine("现在的数值：iVar1 = {0}, iVar2 = {1}", iVar1, iVar2);
+            iVar1 = iVar1 - iVar2;
+            iVar2 = iVar1 + iVar2;
+            iVar1 = iVar2 - iVar1;
+            Console.WriteLine("改变后的数值：iVar1 = {0}, iVar2 = {1}", iVar1, iVar2);
+        }
+        /// <summary>
+        /// 只用原有的两个变量交换数据，方法二
+        /// </summary>
+        public static void Method_03()
+        {
+            int iVar1 = 10, iVar2 = 20;
+            Console.WriteLine("现在的数值：iVar1 = {0}, iVar2 = {1}", iVar1, iVar2);
+            iVar1 = iVar1 ^ iVar2;
+            iVar2 = iVar1 ^ iVar2;
+            iVar1 = iVar1 ^ iVar2;
+            Console.WriteLine("改变后的数值：iVar1 = {0}, iVar2 = {1}", iVar1, iVar2);
+        }
+        #endregion
+
+
 
     }
 }

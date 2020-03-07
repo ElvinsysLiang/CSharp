@@ -21,13 +21,21 @@
 /*
  *  解决方案的名称为：CSharpConsolePractice
  *  解决方案以下按照CSharp控制台程序设计的基础知识分为多个项目，目的是用来对基本知识的练习
+ *  
+ *  草稿：
+ *      变量常量
+ *      运算符
+ *      if...else...switch...
+ *      while...do while...，for...foreach...，
+ *      方法
+ *      面向对象
  * 
  *  解决方案之下，分为若干项目：
  *  CP01-PlatformIntroduce
  *  CP02-Types
  *      string
  *      array
- *  CP03-Expression
+ *  CP03-Operator
  *  CP04-Branches
  *  CP04-Loops
  *  CP05-Methodes
@@ -48,7 +56,7 @@
  *  步骤：
  *      1）
  *  变量：
- *      修饰符     变量类型         变量名     备注
+ *      修饰符     变量类型      变量名       备注
  *  方法：
  *      修饰符         返回值类型    方法名            参数类型    备注
  */

@@ -115,6 +115,33 @@ namespace CP03Operator
             //Forms.Line("CP03_04");
             //Op01Arith.CP03_04();
 
+            #region CP03_05：交换两个整形变量值的三种方法
+            /*
+             *  例程编号：CP03_05
+             *  摘要：
+             *      交换两个整形变量值的三种方法
+             *  说明：
+             *      1）  用第三个变量交换数据
+             *      2）  只用原来的两个变量交换数据
+             *  步骤：
+             *      1）  用第三个变量交换数据
+             *      2）  只用原有的两个变量交换数据，方法一
+             *      3）  只用原有的两个变量交换数据，方法二
+             *  变量：
+             *      修饰符     变量类型      变量名       备注
+             *                  int         iVar1       第一个整形变量
+             *                  int         iVar2       第二个整形变量
+             *                  int         iTemp       用于暂存数据的变量
+             *  方法：
+             *      修饰符         返回值类型    方法名            参数类型    备注
+             *                      void        Method_1        void        
+             *                      void        Method_2        void
+             *                      void        Method_3        void
+             */
+            #endregion
+            //Forms.Line("CP03_05");
+            //Op01Arith.CP03_05();
+
 
         }
     }
