@@ -9,7 +9,7 @@
  * CLR 版本 ：4.0.30319.42000
  * 作    者 ：Elvinsys
  * 创建时间 ：2020-02-28 14:28:21
- * 更新时间 ：2020-02-28 14:28:21
+ * 更新时间 ：2020-03-08 14:41:31
  * 版 本 号 ：v1.0.0.0
  ****************************************************************
  * Copyright @ Elvinsys 2020. All rights reserved.
@@ -168,9 +168,9 @@ namespace CP03Operator
          *      1）  用第三个变量交换数据
          *      2）  只用原来的两个变量交换数据
          *  步骤：
-         *      1）  用第三个变量交换数据
-         *      2）  只用原有的两个变量交换数据，方法一
-         *      3）  只用原有的两个变量交换数据，方法二
+         *      1）  利用第三个变量
+         *      2）  利用加减
+         *      3）  利用异或
          *  变量：
          *      修饰符     变量类型      变量名       备注
          *                  int         iVar1       第一个整形变量
@@ -232,6 +232,92 @@ namespace CP03Operator
         }
         #endregion
 
+        #region CP03_06：用户输入x天，计算出是几周零几天
+        /*
+         *  例程编号：CP03_06
+         *  摘要：
+         *      用户输入x天，计算出是几周零几天
+         *  说明：
+         *      1）接收用户的天数
+         *      2）对天数的处理，并把结果输出到控制台上
+         *          iDay = x % 7;
+         *          iWeek = x / 7;
+         *  步骤：
+         *      1）处理天数，算出几周几天，输出到控制台上
+         *  变量：
+         *      修饰符     变量类型      变量名       备注
+         *                  int         iDay
+         *  方法：
+         *      修饰符      返回值类型      方法名           参数类型    备注
+         *                  void           DayWeek          int 
+         */
+        /// <summary>
+        /// 用户输入x天，计算出是几周零几天
+        /// </summary>
+        public static void CP03_06()
+        {
+            int iDay;
+            Console.Write("请输入要计算的天数：");
+            iDay = Convert.ToInt32(Console.ReadLine());
+            DayWeek(iDay);
+        }
+        /// <summary>
+        /// 处理天数，算出几周几天，输出到控制台上
+        /// </summary>
+        /// <param name="x">需要计算的天数</param>
+        public static void DayWeek(int x)
+        {
+            int iDay, iWeek;
+            iDay = x % 7;
+            iWeek = x / 7;
+            Console.WriteLine("{0}天，是{1}周{2}天", x, iWeek, iDay);
+        }
+        #endregion
+
+        #region CP03_07：用户输入x秒，计算出几天几小时几分几秒
+        /*
+         *  例程编号：CP03_07
+         *  摘要：
+         *      用户输入x秒，计算出几天几小时几分几秒
+         *  说明：
+         *      1）接收用户的秒数
+         *      2）对秒数的处理，并把结果输出到控制台上
+         *          iSec = x % 60;
+         *          iMin = x / 60 % 60;
+         *          iHour = x / (60*60) % 24;
+         *          iDay = x / (60*60*24)
+         *          
+         *  步骤：
+         *      1）处理秒数，算出几天几小时几分几秒，输出到控制台上
+         *  变量：
+         *      修饰符     变量类型      变量名       备注
+         *                  int         iX
+         *  方法：
+         *      修饰符         返回值类型       方法名          参数类型    备注
+         *                      void           DyHrMnSc          int
+         */
+        /// <summary>
+        /// 用户输入x秒，计算出几天几小时几分几秒
+        /// </summary>
+        public static void CP03_07()
+        {
+            Console.Write("请输入需要计算的秒数：");
+            int iX = Convert.ToInt32(Console.ReadLine());
+            DyHrMnSc(iX);
+        }
+        /// <summary>
+        /// 处理秒数，算出几天几小时几分几秒，输出到控制台上
+        /// </summary>
+        /// <param name="x">需要计算的秒数</param>
+        public static void DyHrMnSc(int x)
+        {
+            int iSec = x % 60;
+            int iMin = x / 60 % 60;
+            int iHour = x / (60 * 60) % 24;
+            int iDay = x / (60 * 60 * 24);
+            Console.WriteLine("{0}秒，就是{1}天{2}时{3}分{4}秒", x, iDay, iHour, iMin, iSec);
+        }
+        #endregion
 
 
     }
