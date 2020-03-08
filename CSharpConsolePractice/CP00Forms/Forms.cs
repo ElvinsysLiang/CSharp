@@ -36,9 +36,9 @@
  *      string
  *      array
  *  CP03-Operator
- *  CP04-Branches
- *  CP04-Loops
- *  CP05-Methodes
+ *  CP04-Branch
+ *  CP04-Loop
+ *  CP05-Method
  *  CP06-ObjectOriented
  *  
  *  项目之下，各类的命名方式

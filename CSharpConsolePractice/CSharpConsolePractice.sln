@@ -9,10 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CP02Types", "CP02Types\CP02
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CP00Forms", "CP00Forms\CP00Forms.csproj", "{E3DE4D05-8BD7-4888-A597-7A915B4EF9C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CP03Operator", "CP03Operator\CP03Operator.csproj", "{B0594C20-B5C4-46A1-AE2B-FCC581713FC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CP03Operator", "CP03Operator\CP03Operator.csproj", "{B0594C20-B5C4-46A1-AE2B-FCC581713FC2}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E3DE4D05-8BD7-4888-A597-7A915B4EF9C7} = {E3DE4D05-8BD7-4888-A597-7A915B4EF9C7}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CP04Branch", "CP04Branch\CP04Branch.csproj", "{A4FE8611-873D-4731-859C-6097865A6A23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +38,10 @@ Global
 		{B0594C20-B5C4-46A1-AE2B-FCC581713FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0594C20-B5C4-46A1-AE2B-FCC581713FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0594C20-B5C4-46A1-AE2B-FCC581713FC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4FE8611-873D-4731-859C-6097865A6A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4FE8611-873D-4731-859C-6097865A6A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4FE8611-873D-4731-859C-6097865A6A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4FE8611-873D-4731-859C-6097865A6A23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
