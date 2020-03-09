@@ -69,7 +69,56 @@ namespace CP04Branch
             //Forms.Line("CP04_01");
             //Bch01IfStatement.CP04_01();
 
+            #region CP04_02：if语句的6个练习
+            /*
+             *  例程编号：CP04_02
+             *  摘要：
+             *      if语句的6个练习
+             *  说明：
+             *      1）
+             *  步骤：
+             *      1）比较两个数是否相等（格式二）
+             *      2）获取两个数的最大值（格式二）
+             *      3）获取三个数的最大值（嵌套，格式三，三目运算符）
+             *      4）根据成绩输出对应的等级（格式三）
+             *      5）根据月份输出对应的季节（格式三）
+             *      6）根据x计算对应y的值（格式三）
+             *  变量：
+             *      修饰符     变量类型      变量名       备注
+             *                  int         iVar1
+             *                  int         iVar2
+             *                  int         iVar3
+             *                  int         iMax
+             *                  int         iScore
+             *                  int         iMonth
+             *                  int         iX
+             *  方法：
+             *      修饰符         返回值类型    方法名            参数类型    备注
+             */
+            #endregion
+            //Forms.Line("CP04_02");
+            //Bch01IfStatement.CP04_02();
 
+            #region CP04_03：switch语句的2个练习
+            /*
+             *  例程编号：CP04_03
+             *  摘要：
+             *      switch语句的2个练习
+             *  说明：
+             *      1）利用switch语句，键盘输入1~7，输出星期几
+             *  步骤：
+             *      1）键盘输入1~7，输出星期几
+             *      2）键盘输入月份，输出季节
+             *  变量：
+             *      修饰符     变量类型      变量名       备注
+             *                  int         iDay
+             *                  int         iMonth
+             *  方法：
+             *      修饰符         返回值类型    方法名            参数类型    备注
+             */
+            #endregion
+            //Forms.Line("CP04_03");
+            //Bch01IfStatement.CP04_03();
         }
     }
 }
