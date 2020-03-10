@@ -37,20 +37,20 @@
  *      array
  *  CP03-Operator
  *  CP04-Branch
- *  CP04-Loop
- *  CP05-Method
- *  CP06-ObjectOriented
+ *  CP05-Loop
+ *  CP06-Method
+ *  CP07-ObjectOriented
  *  
  *  项目之下，各类的命名方式
  *  如   PI01Froms
  * 
  */
 
-#region CP01_01：简单的Hello World程序
+#region CP01_01：简单的HelloWorld程序
 /*
  *  例程编号：CP01_01
  *  摘要：
- *      简单的Hello World程序
+ *      简单的HelloWorld程序
  *  说明：
  *      1）
  *  步骤：

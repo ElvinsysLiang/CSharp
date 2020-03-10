@@ -183,7 +183,8 @@ namespace CP04Branch
             else
             {
                 Console.WriteLine("获取两个数的最大值，结果是：iVar2大于或等于iVar1，因此，最大值是：" + iVar2);
-            }Forms.Cut();
+            }
+            Forms.Cut();
 
             //3）获取三个数的最大值（嵌套，格式三，三目运算符）
             Console.WriteLine("先用嵌套来实现：");
@@ -211,10 +212,11 @@ namespace CP04Branch
             }
 
             Console.WriteLine("然后用格式三实现：");
-            if (iVar1 > iVar2 && iVar1>iVar3)
+            if (iVar1 > iVar2 && iVar1 > iVar3)
             {
                 Console.WriteLine("iVar1 iVar2 iVar3 中的最大值是：" + iVar1);
-            } else if (iVar2 > iVar1 && iVar2 > iVar3)
+            }
+            else if (iVar2 > iVar1 && iVar2 > iVar3)
             {
                 Console.WriteLine("iVar1 iVar2 iVar3 中的最大值是：" + iVar2);
             }
@@ -234,13 +236,16 @@ namespace CP04Branch
             if (iScore > 100 || iScore < 0)
             {
                 Console.WriteLine("您输入的成绩有误。");
-            }else if (iScore < 60)
+            }
+            else if (iScore < 60)
             {
                 Console.WriteLine("不及格了，丢去参加补习班");
-            }else if (iScore >= 60 && iScore < 70)
+            }
+            else if (iScore >= 60 && iScore < 70)
             {
                 Console.WriteLine("成绩中等，给一个小红花吧");
-            }else if (iScore >= 70 && iScore < 90)
+            }
+            else if (iScore >= 70 && iScore < 90)
             {
                 Console.WriteLine("成绩良好，给两个小红花");
             }
@@ -253,16 +258,19 @@ namespace CP04Branch
             //5）根据月份输出对应的季节（格式三）
             Console.Write("请输入一个月份来判断季节：");
             iMonth = Convert.ToInt32(Console.ReadLine());
-            if(iMonth<=0 || iMonth > 12)
+            if (iMonth <= 0 || iMonth > 12)
             {
                 Console.WriteLine("输入的月份有误");
-            }else if (iMonth == 12 || iMonth == 1 || iMonth == 2)
+            }
+            else if (iMonth == 12 || iMonth == 1 || iMonth == 2)
             {
                 Console.WriteLine("{0}月是冬季", iMonth);
-            }else if (iMonth == 3 || iMonth == 4 || iMonth == 5)
+            }
+            else if (iMonth == 3 || iMonth == 4 || iMonth == 5)
             {
                 Console.WriteLine("{0}月是春季", iMonth);
-            }else if (iMonth == 6 || iMonth == 7 || iMonth == 8)
+            }
+            else if (iMonth == 6 || iMonth == 7 || iMonth == 8)
             {
                 Console.WriteLine("{0}月是夏季", iMonth);
             }
@@ -278,102 +286,14 @@ namespace CP04Branch
             if (iX >= 3)
             {
                 Console.WriteLine("x = {0}, y = {1}", iX, 2 * iX + 1);
-            }else if (iX >= -1 && iX < 3)
+            }
+            else if (iX >= -1 && iX < 3)
             {
                 Console.WriteLine("x = {0}, y = {1}", iX, 2 * iX);
             }
             else
             {
                 Console.WriteLine("x = {0}, y = {1}", iX, 2 * iX - 1);
-            }
-        }
-        #endregion
-
-        #region CP04_03：switch语句的2个练习
-        /*
-         *  例程编号：CP04_03
-         *  摘要：
-         *      switch语句的2个练习
-         *  说明：
-         *      1）
-         *  步骤：
-         *      1）键盘输入1~7，输出星期几
-         *      2）键盘输入月份，输出季节
-         *  变量：
-         *      修饰符     变量类型      变量名       备注
-         *                  int         iDay
-         *                  int         iMonth
-         *  方法：
-         *      修饰符         返回值类型    方法名            参数类型    备注
-         */
-
-        /// <summary>
-        /// switch语句的2个练习
-        /// </summary>
-        public static void CP04_03()
-        {
-            int iDay, iMonth;
-
-            //键盘输入1~7，输出星期几
-            Console.Write("请输入1~7，判断星期几：");
-            iDay = Convert.ToInt32(Console.ReadLine());
-            switch (iDay)
-            {
-                case 1:
-                    Console.WriteLine("星期一");
-                    break;
-                case 2:
-                    Console.WriteLine("星期二");
-                    break;
-                case 3:
-                    Console.WriteLine("星期三");
-                    break;
-                case 4:
-                    Console.WriteLine("星期四");
-                    break;
-                case 5:
-                    Console.WriteLine("星期五");
-                    break;
-                case 6:
-                    Console.WriteLine("星期六");
-                    break;
-                case 7:
-                    Console.WriteLine("星期日");
-                    break;
-                default:
-                    Console.WriteLine("输入的信息有误");
-                    break;
-            }
-            Forms.Cut();
-
-            //键盘输入月份，输出季节
-            Console.Write("请输入月份，判断季节：");
-            iMonth = Convert.ToInt32(Console.ReadLine());
-            switch (iMonth)
-            {
-                case 3:
-                case 4:
-                case 5:
-                    Console.WriteLine("{0}月是春季", iMonth);
-                    break;
-                case 6:
-                case 7:
-                case 8:
-                    Console.WriteLine("{0}月是夏季", iMonth);
-                    break;
-                case 9:
-                case 10:
-                case 11:
-                    Console.WriteLine("{0}月是秋季", iMonth);
-                    break;
-                case 12:
-                case 1:
-                case 2:
-                    Console.WriteLine("{0}月是冬季", iMonth);
-                    break;
-                default:
-                    Console.WriteLine("输入的月份有误");
-                    break;
             }
         }
         #endregion

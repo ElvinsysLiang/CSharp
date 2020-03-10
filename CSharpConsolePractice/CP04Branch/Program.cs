@@ -118,7 +118,56 @@ namespace CP04Branch
              */
             #endregion
             //Forms.Line("CP04_03");
-            //Bch01IfStatement.CP04_03();
+            //Bch02Switch.CP04_03();
+
+            #region CP04_04：switch语句的选择值
+            /*
+             *  例程编号：CP04_04
+             *  摘要：
+             *      switch语句的选择值
+             *  说明：
+             *      1）测试的数据类型：
+             *          整形：byte/short/ushort/int/uint/long/ulong
+             *          浮点型：float/double/decimal
+             *          char/string/bool
+             *  步骤：
+             *      1）
+             *  变量：
+             *      修饰符     变量类型      变量名       备注
+             *  方法：
+             *      修饰符         返回值类型    方法名            参数类型    备注
+             */
+            #endregion
+            //Forms.Line("CP04_04");
+            //Bch02Switch.CP04_04();
+
+            #region CP04_05：break,continue
+            /*
+             *  例程编号：CP04_05
+             *  摘要：
+             *      break,continue
+             *  说明：
+             *      1）补齐以下代码
+             *      for(int i = 1;i <= 10;i++)
+             *      {
+             *          if(i%3==0)
+             *          {
+             *              //补齐代码
+             *          }
+             *          Console.WriteLine("Hello World");
+             *      }
+             *  步骤：
+             *      1）输出2次Hello World
+             *      2）输出7次Hello World
+             *      3）输出13次Hello World
+             *  变量：
+             *      修饰符     变量类型      变量名       备注
+             *  方法：
+             *      修饰符         返回值类型    方法名            参数类型    备注
+             */
+            #endregion
+            //Forms.Line("CP04_05");
+            //Bch02Switch.CP04_05();
         }
     }
 }
