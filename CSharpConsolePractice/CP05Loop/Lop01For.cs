@@ -45,7 +45,7 @@ namespace CP05Loop
         /// </summary>
         public static void CP05_01()
         {
-            for(int i =0; i < 10; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine("Hello World");
             }
@@ -71,7 +71,7 @@ namespace CP05Loop
         /// </summary>
         public static void CP05_03()
         {
-            for(int i = 1; i <= 10; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 Console.WriteLine(i);
             }
@@ -97,7 +97,7 @@ namespace CP05Loop
         /// </summary>
         public static void CP05_05()
         {
-            for(int i = 10; i > 0; i--)
+            for (int i = 10; i > 0; i--)
             {
                 Console.WriteLine(i);
             }
@@ -125,7 +125,7 @@ namespace CP05Loop
         public static void CP05_07()
         {
             int sum = 0;
-            for(int i = 1; i <= 10; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 sum += i;
             }
@@ -154,7 +154,7 @@ namespace CP05Loop
         public static void CP05_09()
         {
             int sum = 0;
-            for(int i = 100; i > 0; i--)
+            for (int i = 100; i > 0; i--)
             {
                 sum += i;
             }
@@ -183,7 +183,7 @@ namespace CP05Loop
         public static void CP05_11()
         {
             int sum = 0;
-            for(int i = 1; i <= 100; i++)
+            for (int i = 1; i <= 100; i++)
             {
                 if (i % 2 == 0)
                 {
@@ -215,7 +215,7 @@ namespace CP05Loop
         public static void CP05_13()
         {
             int iSum = 0;
-            for(int i = 1; i <= 100; i++)
+            for (int i = 1; i <= 100; i++)
             {
                 if (i % 2 == 1)
                 {
@@ -247,7 +247,7 @@ namespace CP05Loop
         public static void CP05_15()
         {
             int iFactorial = 1;
-            for(int i = 1; i <= 5; i++)
+            for (int i = 1; i <= 5; i++)
             {
                 iFactorial *= i;
             }
@@ -274,9 +274,9 @@ namespace CP05Loop
         /// </summary>
         public static void CP05_17()
         {
-            for(int i = 1; i <= 9; i++)
+            for (int i = 1; i <= 9; i++)
             {
-                for(int j = 1; j <= i; j++)
+                for (int j = 1; j <= i; j++)
                 {
                     Console.Write("{0} * {1} = {2}\t", j, i, j * i);
                 }
@@ -306,9 +306,81 @@ namespace CP05Loop
         /// </summary>
         public static void CP05_18()
         {
-            for(int i = 1; i <= 1000; i++)
+            for (int i = 1; i <= 1000; i++)
             {
                 if ((i % 3 == 2) && (i % 5 == 3) && (i % 7 == 2))
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+        #endregion
+
+        #region CP05_25：用for语句和continue计算题
+        /*
+         *  例程编号：CP05_25
+         *  摘要：
+         *      计算1-100中，除了能被7整除的数以外的其他数之和
+         *  说明：
+         *      1）
+         *  步骤：
+         *      1）
+         *  变量：
+         *      修饰符     变量类型      变量名       备注
+         *                  int         iSum
+         *  方法：
+         *      修饰符         返回值类型    方法名            参数类型    备注
+         */
+        /// <summary>
+        /// 计算1-100中，除了能被7整除的数以外的其他数之和
+        /// </summary>
+        public static void CP05_25()
+        {
+            int iSum = 0;
+            for (int i = 1; i <= 100; i++)
+            {
+                if (i % 7 == 0)
+                {
+                    continue;
+                }
+                iSum += i;
+            }
+            Console.WriteLine("1-100中，除了能被7整除的以外，其他数之和是：" + iSum);
+        }
+        #endregion
+
+        #region CP05_26：用for语句找出1-100中的所有素数
+        /*
+         *  例程编号：CP05_26
+         *  摘要：
+         *      用for语句找出1-100中的所有素数
+         *  说明：
+         *      1）素数：只能被1和自己整除的整数
+         *  步骤：
+         *      1）
+         *  变量：
+         *      修饰符     变量类型      变量名       备注
+         *                  bool        bFlag
+         *  方法：
+         *      修饰符         返回值类型    方法名            参数类型    备注
+         */
+        /// <summary>
+        /// 用for语句找出1-100中的所有素数
+        /// </summary>
+        public static void CP05_26()
+        {
+            for(int i = 2; i <= 100; i++)
+            {
+                bool bFlag = true;
+                for (int j = 2; j < i; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        bFlag = false;
+                        break;
+                    }
+                }
+                if (bFlag)
                 {
                     Console.WriteLine(i);
                 }
