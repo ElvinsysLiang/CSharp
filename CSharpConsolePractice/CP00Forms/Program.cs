@@ -6,7 +6,22 @@ namespace CP00Forms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int[] iArray = null;
+            Print(iArray);
+        }
+        public static void Print(int[] iArray)
+        {
+            if (iArray == null)
+            {
+                Console.WriteLine("error");
+            }
+            else
+            {
+                for (int i = 0; i < iArray.Length; i++)
+                {
+                    Console.WriteLine(iArray[i]);
+                }
+            }
         }
     }
 }
