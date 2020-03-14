@@ -409,7 +409,80 @@ namespace CP02Types
         }
         #endregion
 
+        #region CP02_13：整形二维数组的动态初始化
+        /*
+         *  例程编号：CP02_13
+         *  摘要：
+         *      整形二维数组的动态初始化
+         *  说明：
+         *      1）
+         *  步骤：
+         *      1）
+         *  变量：
+         *      修饰符     变量类型      变量名       备注
+         *  方法：
+         *      修饰符         返回值类型    方法名            参数类型    备注
+         */
+        /// <summary>
+        /// 整形二维数组的动态初始化
+        /// </summary>
+        public static void CP02_13()
+        {
+            //在栈中添加引用,在堆中申请空间，3行2列二维数组
+            //int[][] iArray2 = new int[3][2];//在Java里可以这样，但C#不行
+            int[][] iArray2 = new int[3][];
+            iArray2[0] = new int[2];
+            iArray2[1] = new int[2];
+            iArray2[2] = new int[2];
+            //给整形二维数组赋值
+            for (int i = 0; i < iArray2.Length; i++)
+            {
+                for(int j = 0; j < iArray2[i].Length; j++)
+                {
+                    iArray2[i][j] = i;
+                }
+            }
+            for(int i = 0; i < iArray2.Length; i++)
+            {
+                for (int j = 0; j < iArray2[i].Length; j++)
+                {
+                    Console.WriteLine("iArray2[" + i + "][" + j + "] = " + iArray2[i][j]);
+                }
+            }
+        }
+        #endregion
 
+        #region CP02_14：整形二维数组的静态初始化
+        /*
+         *  例程编号：CP02_14
+         *  摘要：
+         *      整形二维数组的静态初始化
+         *  说明：
+         *      1）
+         *  步骤：
+         *      1）
+         *  变量：
+         *      修饰符     变量类型      变量名       备注
+         *  方法：
+         *      修饰符         返回值类型    方法名            参数类型    备注
+         */
+        /// <summary>
+        /// 整形二维数组的静态初始化
+        /// </summary>
+        public static  void CP02_14()
+        {
+            //静态初始化一个3行2列的整形二维数组
+            int[,] iArray2 = { { 1, 2 }, { 3, 4 }, { 5, 6 } };
+            //遍历
+            for(int i = 0; i < 3; i++)
+            {
+                for(int j = 0; j < 2; j++)
+                {
+                    Console.WriteLine("iArray[" + i + "][" + j + "] = " + iArray2[i, j]);
+                }
+            }
+        }
+        #endregion
 
 
     }

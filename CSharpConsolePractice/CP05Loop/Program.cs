@@ -538,7 +538,24 @@ namespace CP05Loop
             //Forms.Line("CP05_26");
             //Lop01For.CP05_26();
 
-
+            #region CP05_27：foreach的简单例程
+            /*
+             *  例程编号：CP05_27
+             *  摘要：
+             *      foreach的简单例程
+             *  说明：
+             *      1）定义一个整形一维数组，里面放1-5
+             *      2）用foreach打印到控制台
+             *  步骤：
+             *      1）
+             *  变量：
+             *      修饰符     变量类型      变量名       备注
+             *  方法：
+             *      修饰符         返回值类型    方法名            参数类型    备注
+             */
+            #endregion
+            //Forms.Line("CP05_27");
+            //Lop03Foreach.CP05_27();
         }
     }
 }
