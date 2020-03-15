@@ -95,5 +95,43 @@ namespace CP06Method
             iArray[0] = 2;
         }
         #endregion
+
+        #region CP06_02：方法的例程
+        /*
+         *  例程编号：CP06_02
+         *  摘要：
+         *      方法的例程
+         *  说明：
+         *      1）用户输入整形数据，如果不是整数，提示重新输入
+         *      2）利用的语句：while，try...catch...
+         *  步骤：
+         *      1）
+         *  变量：
+         *      修饰符     变量类型      变量名       备注
+         *                  int         iVar
+         *  方法：
+         *      修饰符         返回值类型    方法名            参数类型    备注
+         */
+        public static void CP06_02()
+        {
+            int iVar;
+            Console.Write("请输入整形数据：");
+            while (true)
+            {
+                try
+                {
+                    iVar = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("您输入的数据是：{0}", iVar);
+                    break;
+                }
+                catch
+                {
+                    Console.WriteLine("您输入的数据不是一个整形数据，请重新输入。");
+                }
+            }
+        }
+        #endregion
+
+
     }
 }
