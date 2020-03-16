@@ -132,6 +132,168 @@ namespace CP06Method
         }
         #endregion
 
+        #region CP06_09：方法的重载
+        /*
+         *  例程编号：CP06_09
+         *  摘要：
+         *      方法的重载
+         *  说明：
+         *      1）方法重载的条件：1.方法名一样；2.参数的个数或类型不一样
+         *  步骤：
+         *      1）方法一：2个整形变量相加，返回相加之和
+         *      2）方法二：2个整形变量相加，返回两字符串相连接的字符串（无法重载）
+         *      3）方法三：3个整形变量相加，返回相加之和（和方法一发生重载）
+         *  变量：
+         *      修饰符     变量类型      变量名       备注
+         *  方法：
+         *      修饰符     返回值类型    方法名          参数类型    备注
+         *                  int         GetSum          int,int
+         *                  string      GetSum          int,int     无法重载，方法名和参数类型或个数一样
+         *                  int         GetSum          int,int,int 可以重载，参数个数不一样
+         */
+        /// <summary>
+        /// 方法的重载
+        /// </summary>
+        public static void CP06_09()
+        {
+            //测试返回类型不同，但参数相同的方法
+            //不可以。方法重载的条件是：
+            //          1.方法名一样；2.参数个数或类型不相同
+
+            Console.WriteLine("利用GetSum()方法计算 1 + 2 = " + GetSum(1, 2));
+            Console.WriteLine("利用GetSum()方法计算 1 + 2 + 3 = " + GetSum(1, 2, 3));
+        }
+
+        /// <summary>
+        /// 2个整形变量相加
+        /// </summary>
+        /// <param name="iVar_1">整形变量1</param>
+        /// <param name="iVar_2">整形变量2</param>
+        /// <returns>2个整形数据相加之和</returns>
+        public static int GetSum(int iVar_1, int iVar_2)
+        {
+            return iVar_1 + iVar_2;
+        }
+
+        /// <summary>
+        /// 2个整形数据的字符串连接（无法重载）
+        /// </summary>
+        /// <param name="iVar_1">整形变量1</param>
+        /// <param name="iVar_2">整形变量2</param>
+        /// <returns>2个整形数据连接的字符串</returns>
+        //public static string GetSum(int iVar_1,int iVar_2)
+        //{
+        //    return iVar_1.ToString() + iVar_2.ToString();
+        //}
+
+        /// <summary>
+        /// 3个整形变量相加(参数的个数不同，可以重载）
+        /// </summary>
+        /// <param name="iVar_1">整形变量1</param>
+        /// <param name="iVar_2">整形变量2</param>
+        /// <param name="iVar_3">整形变量3</param>
+        /// <returns>2个整形数据相加之和</returns>
+        public static int GetSum(int iVar_1, int iVar_2, int iVar_3)
+        {
+            return iVar_1 + iVar_2 + iVar_3;
+        }
+        #endregion
+
+        #region CP06_10：方法递归的例程
+        /*
+         *  例程编号：CP06_10
+         *  摘要：
+         *      方法递归的例程
+         *  说明：
+         *      1）方法递归就是在方法里面执行自己
+         *      2）注意：
+         *          第一，明确方法的功能。（明确需要的条件，确定返回值和参数）
+         *          第二，明确递归退出的条件。
+         *          第三，找到递归的关系是
+         *  步骤：
+         *      1）方法1：按照用户的要求次数来输出HelloWorld
+         *      2）方法2：实现n的阶乘
+         *  变量：
+         *      修饰符     变量类型      变量名       备注
+         *  方法：
+         *      修饰符     返回值类型    方法名          参数类型    备注
+         */
+        /// <summary>
+        /// 方法递归的例程
+        /// </summary>
+        public static void CP06_10()
+        {
+            int iVar;
+            Console.Write("请输入需要重复显示HelloWorld的次数：");
+            try
+            {
+                iVar = Convert.ToInt32(Console.ReadLine());
+                while (iVar < 0)
+                {
+                    Console.Write("阶乘必须大于或等于0，请重新输入：");
+                    iVar = Convert.ToInt32(Console.ReadLine());
+                }
+                ShowHelloWorld(iVar);
+            }
+            catch
+            {
+                Console.WriteLine("输入的不是一个整形数字，跳过显示次数，继续执行阶乘程序...");
+            }
+            CP00Forms.Forms.Cut();
+
+            Console.Write("请输入一个整形数字，就n的阶乘：");
+            try
+            {
+                iVar = Convert.ToInt32(Console.ReadLine());
+                //计算N的阶乘
+                while (iVar < 0)
+                {
+                    Console.Write("阶乘必须大于或等于0，请重新输入：");
+                    iVar = Convert.ToInt32(Console.ReadLine());
+                }
+                Console.WriteLine("{0}的阶乘是：{1}", iVar, Factorial(iVar));
+            }
+            catch
+            {
+                Console.WriteLine("输入的不是一个整形数字，程序退出。");
+                return;
+            }
+        }
+
+        /// <summary>
+        /// 按照用户输入的次数在控制台打印HelloWorld
+        /// </summary>
+        /// <param name="iVar">输出控制台的次数</param>
+        public static void ShowHelloWorld(int iVar)
+        {
+            if (iVar == 0)
+            {
+                Console.WriteLine("显示完毕。");
+                return;
+            }
+            Console.WriteLine("第{0}次显示：HelloWorld.",iVar);
+            ShowHelloWorld(--iVar);
+        }
+
+        /// <summary>
+        /// n的阶乘
+        /// </summary>
+        /// <param name="iVar"></param>
+        /// <returns>n的阶乘</returns>
+        public static int Factorial(int iVar)
+        {
+            if (iVar == 1 || iVar == 0)
+            {
+                return 1;
+            }
+            if (iVar == 2)
+            {
+                return 2;
+            }
+            return iVar * Factorial(iVar - 1);
+        }
+        #endregion
+
 
     }
 }
