@@ -276,18 +276,39 @@ namespace CP08ObjectOriented
         }
         public class FieldTest
         {
+            /// <summary>
+            /// 静态字段
+            /// </summary>
             private static int _staField;
+            /// <summary>
+            /// 非静态字段
+            /// </summary>
             private int _iField;
-
+            /// <summary>
+            /// 静态属性
+            /// </summary>
             public static int StaField { get => _staField; set => _staField = value; }
+            /// <summary>
+            /// 非静态属性
+            /// </summary>
             public int IField { get => _iField; set => _iField = value; }
-
+            /// <summary>
+            /// 无参构造函数
+            /// </summary>
             public FieldTest() { }
+            /// <summary>
+            /// 带参构造函数
+            /// </summary>
+            /// <param name="sF">静态属性赋值</param>
+            /// <param name="iF">非静态属性赋值</param>
             public FieldTest(int sF, int iF)
             {
                 StaField = sF;//静态字段不能用this
                 this.IField = iF;//非静态字段需要this
             }
+            /// <summary>
+            /// 显示静态属性与非静态属性的值
+            /// </summary>
             public void ShowField()
             {
                 Console.WriteLine("StaField = {0}, Field = {1}", StaField, IField);
@@ -336,6 +357,254 @@ namespace CP08ObjectOriented
             public void Show()
             {
                 Console.WriteLine("This is not static show.");
+            }
+        }
+        #endregion
+
+        #region CP08_05：学生类（练习）
+        /*
+         *  例程编号：CP08_05
+         *  摘要：
+         *      学生类（练习）
+         *  说明：
+         *      1）学生的属性
+         *          姓名，年龄（12-17），学生证号（自动生成，只读），语文成绩，数学成绩，英语成绩
+         *      2）无参构造函数，带参构造函数
+         *      3）非静态方法：基本信息录入，成绩信息录入，信息查询
+         *      4）静态方法：三科总成绩，三科平均成绩
+         *  步骤：
+         *      1）
+         *  变量：
+         *      修饰符     变量类型      变量名       备注
+         *      private     string      _strName    字段：学生姓名，任意可读可写
+         *      private     int         _iAge       字段：年龄，可读可写（12-17）
+         *      private     string      _strID      字段：学生证号（自动生成，只读）
+         *      private     int         _iChinese   字段：语文成绩，任意可读可写
+         *      private     int         _iMath      字段：数学成绩，任意可读可写
+         *      private     int         _iEnglish   字段：英语成绩，任意可读可写
+         *      private     int         _iSum       字段：三科成绩之和
+         *      private     int         _iAvg       字段：三科成绩平均值
+         *      public      string      StrName     属性：学生姓名，任意可读可写
+         *      public      int         IAge        属性：年龄，可读可写（12-17）
+         *      public      string      StrID       属性：学生证号（自动生成，只读）
+         *      public     int          IChinese    属性：语文成绩，任意可读可写
+         *      public     int          IMath       属性：数学成绩，任意可读可写
+         *      public     int          IEnglish    属性：英语成绩，任意可读可写
+         *      public     int          ISum        属性：三科成绩之和
+         *      public     int          IAvg        属性：三科成绩平均值
+         *      
+         *  方法：
+         *      修饰符     返回值类型    方法名          参数类型      备注
+         *      public      void        InputInfo       Student      输入学生信息
+         *      public      void        InputScore      Student      输入学生的成绩
+         *      public static int       GetSum          Student      返回学生的成绩之和
+         *      public static int       GetAvg          Student      返回学生成绩平均值
+         */
+        /// <summary>
+        /// 学生类（练习）
+        /// </summary>
+        public static void CP08_05()
+        {
+            //无参构造实例化学生类
+            Student s1 = new Student();
+            s1.InputInfor();
+            s1.InputScore();
+            s1.ShowInfo();
+            Student.ShowInfo(s1);
+
+            CP00Forms.Forms.Cut();
+
+            //带参构造实例化学生类
+            Student s2 = new Student("Lucy", 13, 66, 77, 88);
+            s2.ShowInfo();
+            Student.ShowInfo(s2);
+
+        }
+        public class Student
+        {
+            private string _strName;
+            private int _iAge;
+            private string _strID;
+            private int _iChinese;
+            private int _iMath;
+            private int _iEnglish;
+            private int _iSum;
+            private int _iAvg;
+
+            public string StrName { get => _strName; set => _strName = value; }
+            public int IAge
+            {
+                get
+                {
+                    return _iAge;
+                }
+                set
+                {
+                    if (value < 12)
+                    {
+                        Console.WriteLine("_iAge字段不能小于12，自动输入12");
+                        _iAge = 12;
+                    }
+                    else if (value > 17)
+                    {
+                        Console.WriteLine("_iAge字段不能大于12，自动输入17");
+                        _iAge = 17;
+                    }
+                    else
+                    {
+                        _iAge = value;
+                    }
+                }
+            }
+            public string StrID
+            {
+                get
+                {
+                    return _strID;
+                }
+            }
+            public int IChinese
+            {
+                get
+                {
+                    return _iChinese;
+                }
+                set
+                {
+                    if (value < 0)
+                    {
+                        Console.WriteLine("_iChinese字段不能小于0，自动输入0");
+                        _iChinese = 0;
+                    }
+                    else if (value > 100)
+                    {
+                        Console.WriteLine("_iChinese字段不能大于100，自动输入100");
+                        _iChinese = 100;
+                    }
+                    else
+                    {
+                        _iChinese = value;
+                    }
+                }
+            }
+            public int IMath
+            {
+                get
+                {
+                    return _iMath;
+                }
+                set
+                {
+                    if (value < 0)
+                    {
+                        Console.WriteLine("_iMath字段不能小于0，自动输入0");
+                        _iMath = 0;
+                    }
+                    else if (value > 100)
+                    {
+                        Console.WriteLine("_iMath字段不能大于100，自动输入100");
+                        _iMath = 100;
+                    }
+                    else
+                    {
+                        _iMath = value;
+                    }
+                }
+            }
+            public int IEnglish
+            {
+                get
+                {
+                    return _iEnglish;
+                }
+                set
+                {
+                    if (value < 0)
+                    {
+                        Console.WriteLine("_iEnglish字段不能小于0，自动输入0");
+                        _iEnglish = 0;
+                    }
+                    else if (value > 100)
+                    {
+                        Console.WriteLine("_iEnglish字段不能大于100，自动输入100");
+                        _iEnglish = 100;
+                    }
+                    else
+                    {
+                        _iEnglish = value;
+                    }
+                }
+            }
+            public int ISum { get => _iSum; set => _iSum = value; }
+            public int IAvg { get => _iAvg; set => _iAvg = value; }
+            public Student()
+            {
+                //进行学生证初始化
+                Random r = new Random();
+                _strID = r.Next(0, 10).ToString() + r.Next(0, 10).ToString() + r.Next(0, 10).ToString() + r.Next(0, 10).ToString();
+            }
+            public Student(string name, int age, int chinese, int math, int english)
+            {
+                //进行学生证初始化
+                Random r = new Random();
+                _strID = r.Next(0, 10).ToString() + r.Next(0, 10).ToString() + r.Next(0, 10).ToString() + r.Next(0, 10).ToString();
+                this.StrName = name;
+                this.IAge = age;
+                this.IChinese = chinese;
+                this.IMath = math;
+                this.IEnglish = english;
+            }
+            public void InputInfor()
+            {
+                Console.WriteLine("请输入学生基本信息。");
+                try
+                {
+                    Console.Write("姓名：");
+                    this.StrName = Console.ReadLine();
+                    Console.Write("年龄：");
+                    this.IAge = Convert.ToInt32(Console.ReadLine());
+                }
+                catch
+                {
+                    Console.WriteLine("学生信息输入有误。");
+                }
+            }
+            public void InputScore()
+            {
+                Console.WriteLine("请输入学生成绩。");
+                try
+                {
+                    Console.Write("语文成绩：");
+                    this.IChinese = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("数学成绩：");
+                    this.IMath = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("英语成绩：");
+                    this.IEnglish = Convert.ToInt32(Console.ReadLine());
+                }
+                catch
+                {
+                    Console.WriteLine("学生成绩输入有误。");
+                }
+            }
+            public static int GetSum(Student s)
+            {
+                return s.IChinese + s.IMath + s.IEnglish;
+            }
+            public static int GetAvg(Student s)
+            {
+                return (s.IChinese + s.IMath + s.IEnglish) / 3;
+            }
+            public void ShowInfo()
+            {
+                Console.WriteLine("信息\t{0}——姓名：{1}\t年龄：{2}", StrID, StrName, IAge);
+                Console.WriteLine("成绩\t语文：{0}\t数学：{1}\t英语：{2}\t总分：{3}\t平均成绩：{4}",
+                    IChinese, IMath, IEnglish, GetSum(this), GetAvg(this));
+            }
+            public static void ShowInfo(Student s)
+            {
+                Console.WriteLine("信息\t{0}——姓名：{1}\t年龄：{2}", s.StrID, s.StrName, s.IAge);
+                Console.WriteLine("成绩\t语文：{0}\t数学：{1}\t英语：{2}\t总分：{3}\t平均成绩：{4}",
+                    s.IChinese, s.IMath, s.IEnglish, GetSum(s), GetAvg(s));
             }
         }
         #endregion

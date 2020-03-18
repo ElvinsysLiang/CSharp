@@ -116,6 +116,50 @@ namespace CP08ObjectOriented
             //Forms.Line("CP08_04");
             //OO01BasicTest.CP08_04();
 
+            #region CP08_05：学生类（练习）
+            /*
+             *  例程编号：CP08_05
+             *  摘要：
+             *      学生类（练习）
+             *  说明：
+             *      1）学生的属性
+             *          姓名，年龄（12-17），学生证号（自动生成，只读），语文成绩，数学成绩，英语成绩
+             *      2）无参构造函数，带参构造函数
+             *      3）非静态方法：基本信息录入，成绩信息录入，信息查询
+             *      4）静态方法：三科总成绩，三科平均成绩
+             *  步骤：
+             *      1）
+             *  变量：
+             *      修饰符     变量类型      变量名       备注
+             *      private     string      _strName    字段：学生姓名，任意可读可写
+             *      private     int         _iAge       字段：年龄，可读可写（12-17）
+             *      private     string      _strID      字段：学生证号（自动生成，只读）
+             *      private     int         _iChinese   字段：语文成绩，任意可读可写
+             *      private     int         _iMath      字段：数学成绩，任意可读可写
+             *      private     int         _iEnglish   字段：英语成绩，任意可读可写
+             *      private     int         _iSum       字段：三科成绩之和
+             *      private     int         _iAvg       字段：三科成绩平均值
+             *      public      string      StrName     属性：学生姓名，任意可读可写
+             *      public      int         IAge        属性：年龄，可读可写（12-17）
+             *      public      string      StrID       属性：学生证号（自动生成，只读）
+             *      public     int          IChinese    属性：语文成绩，任意可读可写
+             *      public     int          IMath       属性：数学成绩，任意可读可写
+             *      public     int          IEnglish    属性：英语成绩，任意可读可写
+             *      public     int          ISum        属性：三科成绩之和
+             *      public     int          IAvg        属性：三科成绩平均值
+             *      
+             *  方法：
+             *      修饰符     返回值类型    方法名          参数类型      备注
+             *      public      void        InputInfo       Student      输入学生信息
+             *      public      void        InputScore      Student      输入学生的成绩
+             *      public static int       GetSum          Student      返回学生的成绩之和
+             *      public static int       GetAvg          Student      返回学生成绩平均值
+             */
+            #endregion
+            //Forms.Line("CP08_05");
+            //OO01BasicTest.CP08_05();
+
+
 
         }
     }
