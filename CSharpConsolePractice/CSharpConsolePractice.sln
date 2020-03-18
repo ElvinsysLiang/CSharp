@@ -20,7 +20,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CP05Loop", "CP05Loop\CP05Lo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CP06Method", "CP06Method\CP06Method.csproj", "{0BD391A2-42AE-4EC4-A9F9-66A83130883A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CP07FlyingChess", "CP07FlyingChess\CP07FlyingChess.csproj", "{CA79B921-02C0-46D1-B404-63E7F5039096}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CP07FlyingChess", "CP07FlyingChess\CP07FlyingChess.csproj", "{CA79B921-02C0-46D1-B404-63E7F5039096}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CP08ObjectOriented", "CP08ObjectOriented\CP08ObjectOriented.csproj", "{9ADFE07B-3B7A-4E64-835C-EF76FE7E19AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,6 +62,10 @@ Global
 		{CA79B921-02C0-46D1-B404-63E7F5039096}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA79B921-02C0-46D1-B404-63E7F5039096}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA79B921-02C0-46D1-B404-63E7F5039096}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ADFE07B-3B7A-4E64-835C-EF76FE7E19AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ADFE07B-3B7A-4E64-835C-EF76FE7E19AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ADFE07B-3B7A-4E64-835C-EF76FE7E19AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ADFE07B-3B7A-4E64-835C-EF76FE7E19AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
