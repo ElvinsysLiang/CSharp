@@ -10,7 +10,7 @@
 * CLR 版本 ：4.0.30319.42000
 * 作    者 ：Elvinsys
 * 创建时间 ：2020-02-03 16:09:18
-* 更新时间 ：2020-03-14 16:27:00
+* 更新时间 ：2020-03-20 19:00:00
 * 版 本 号 ：v1.0.0.0
 *******************************************************************
 * Copyright @ Elvinsys 2020. All rights reserved.
@@ -446,7 +446,42 @@ namespace CP02Types
             //Forms.Line("CP02_18");
             //Ty05Struct.CP02_18();
 
-
+            #region CP02_19：string的用法
+            /*
+             *  例程编号：CP02_19
+             *  摘要：
+             *      string的用法
+             *  说明：
+             *      1）求长度       String.Length
+             *      2）转大写       String.ToUpper()
+             *      3）转小写       String.ToLower()
+             *      4）比较相等     String.Equals（string，StringComparison）
+             *      5）分割         String.Split(string,StringSplitOption)
+             *      6）分割练习     用户输入xxxx-xx-xx，打印xxxx年xx月xx日
+             *      7）替换         String.Replace(String,String)
+             *      8）截取         String.SubString(int,int)
+             *      9）匹配字符串结尾     String.EndsWith(String)
+             *      10）索引值      String.IndexOf(String,int)
+             *      11）索引值      String.LastIndexOf(String)
+             *      12)索引值练习   文件绝对路径，提取文件名
+             *      13）删除空格     String.Trim()
+             *      14）空字符串     string.IsNullOrEmpty(String)
+             *      15）连接字符串数组 string.Join('Char',String[])
+             *      16）字符串变成字符数组   String.ToCharArray()  字符倒序
+             *      17）字符串倒序 nice to meet u -> u meet to nice
+             *      18）email提取用户名和域名  abc@163.com -> abc 163.com
+             *      19）一个字符在字符串中出现的位置与次数
+             *      20）字符串内容识别    String.Contains(String)
+             *  步骤：
+             *      1）
+             *  变量：
+             *      修饰符     变量类型      变量名       备注
+             *  方法：
+             *      修饰符     返回值类型    方法名          参数类型    备注
+             */
+            #endregion
+            //Forms.Line("CP02_19");
+            //Ty06String.CP02_19();
         }
     }
 }

@@ -159,6 +159,33 @@ namespace CP08ObjectOriented
             //Forms.Line("CP08_05");
             //OO01BasicTest.CP08_05();
 
+            #region CP08_06：继承的例程
+            /*
+             *  例程编号：CP08_06
+             *  摘要：
+             *      继承的例程
+             *  说明：
+             *      1）继承另一个类
+             *          public class Student : Person
+             *      2）带参构造函数加入base关键字
+             *          public Student(string name,Gender gender,Grade,grade) : base(name,gender)
+             *      3）方法重写，需要加入new关键字，用以隐藏基类方法
+             *          public new void ShowInfo()
+             *  步骤：
+             *      1）创建Person类
+             *          属性：（姓名，性别）
+             *          方法：（显示姓名和性别信息）
+             *      2）创建学生类，继承Person类
+             *          属性：新增（班级）属性，枚举
+             *          方法：（显示姓名、性别和班级信息），方法重写
+             *  变量：
+             *      修饰符     变量类型      变量名       备注
+             *  方法：
+             *      修饰符     返回值类型    方法名          参数类型    备注
+             */
+            #endregion
+            //Forms.Line("CP08_06");
+            //OO02Inheritance.CP08_06();
 
 
         }

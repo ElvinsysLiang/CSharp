@@ -197,6 +197,27 @@ namespace CP01PlatformIntroduce
             #endregion
             //Forms.Line("CP01_05");
             //PI06TryCatch.CP01_05();
+
+            #region CP01_06：Stopwatch计时器
+            /*
+             *  例程编号：CP01_06
+             *  摘要：
+             *      StopWatch计时器
+             *  说明：
+             *      1）开始计时  .start()
+             *      2）结束即使  .stop()
+             *      3）统计时间  .Elapsed
+             *  步骤：
+             *      1）计算自增100000次的时间
+             *  变量：
+             *      修饰符     变量类型      变量名       备注
+             *  方法：
+             *      修饰符     返回值类型    方法名          参数类型    备注
+             */
+            #endregion
+            Forms.Line("CP01_06");
+            PI07Stopwatch.CP01_06();
+
         }
     }
 }
