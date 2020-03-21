@@ -187,6 +187,88 @@ namespace CP08ObjectOriented
             //Forms.Line("CP08_06");
             //OO02Inheritance.CP08_06();
 
+            #region CP08_07：多态的例程
+            /*
+             *  例程编号：CP08_07
+             *  摘要：
+             *      多态的例程
+             *  说明：
+             *      1）多态，符合里氏转换原则
+             *      2）出现父类的地方完全能用子类代替
+             *      3）子类的对象能赋值给父类
+             *  步骤：
+             *      1）创建Person类
+             *          方法：public void ShowInfo()
+             *      2）创建Student类
+             *          方法：public void ShowInfo()
+             *      3）把子类对象赋值给父类对象，用父类对象调用子类方法
+             */
+            #endregion
+            //Forms.Line("CP08_07");
+            //OO03Polymorphism.CP08_07();
+
+            #region CP08_08：多态的练习1
+            /*
+             *  例程编号：CP08_08
+             *  摘要：
+             *      多态的练习1
+             *  说明：
+             *      1）is运算：父类对象 is 子类
+             *      2）父类对象 is 父类，比人返回true，即便父类对象里面是子类对象
+             *  步骤：
+             *      1）Person_08类
+             *          方法：PersonSayHi()
+             *      2）Student_08类   继承Person_08类
+             *          方法：StudentSayHi()
+             *      3）Worker_08类    继承Person_08类
+             *          方法：WorkerSayHi()
+             *      4）Teacher_08类   继承Person_08类
+             *          方法：TeacherSayHi()
+             *      5）Programmer_08类    继承Person_08类
+             *          方法：ProgrammerSayHi()
+             */
+            #endregion
+            //Forms.Line("CP08_08");
+            //OO03Polymorphism.CP08_08();
+
+            #region CP08_09：多态的练习2
+            /*
+             *  例程编号：CP08_09
+             *  摘要：
+             *      多态的练习2
+             *  说明：
+             *      1）父类Person
+             *      2）子类Teacher ：Person
+             *      3）子类Student ：Person
+             *      4）子类Worker ：Person
+             *      5）子类Programmer ：Person
+             *      6）创建Person数组，元素个数10个
+             *      7）循环random把子类放到Person数组中
+             *      8）循环用数组中的子类打印信息
+             *  步骤：
+             *      1）
+             */
+            #endregion
+            //Forms.Line("CP08_09");
+            //OO03Polymorphism.CP08_09();
+
+            #region CP08_10：集合的例程
+            /*
+             *  例程编号：CP08_10
+             *  摘要：
+             *      集合的例程
+             *  说明：
+             *      1）数组和集合的区别
+             *          数组：只能放单一类型数据，长度固定
+             *          集合：能放多种类型数据，长度可变
+             *      2）创建集合  ArrayList arrList = new ArrayList();
+             *      3）向集合添加数据   arrList.Add(Int/Char/String...);
+             *  步骤：
+             *      1）
+             */
+            #endregion
+            Forms.Line("CP08_10");
+            OO04ArrayList.CP08_10();
 
         }
     }
