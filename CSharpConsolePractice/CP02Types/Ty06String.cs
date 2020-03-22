@@ -9,7 +9,7 @@
  * CLR 版本 ：4.0.30319.42000
  * 作    者 ：Elvinsys
  * 创建时间 ：2020-03-19 14:07:56
- * 更新时间 ：2020-03-19 14:07:56
+ * 更新时间 ：2020-03-22 13:24:56
  * 版 本 号 ：v1.0.0.0
  ****************************************************************
  * Copyright @ Elvinsys 2020. All rights reserved.
@@ -502,6 +502,38 @@ namespace CP02Types
             string str01 = Console.ReadLine();
             Console.WriteLine("您输入的字符串长度为：{0}", str01.Length);
             CP00Forms.Forms.Cut();
+        }
+        #endregion
+
+        #region CP02_20：输出数组名或对象的地址
+        /*
+         *  例程编号：CP02_20
+         *  摘要：
+         *      输出数组名或对象的地址
+         *  说明：
+         *      1）输出数组名或对象的地址，其实就是命名空间
+         *  步骤：
+         *      1）
+         */
+        /// <summary>
+        /// 输出数组名或对象的命名空间
+        /// </summary>
+        public static void CP02_20()
+        {
+            //实例化Person_20
+            Person_20 clsP = new Person_20();
+            //打印clsP的地址
+            Console.WriteLine("clsP的地址：" + clsP.ToString());
+            Console.WriteLine("clsP的地址：" + clsP);
+            //创建一个int[]
+            int[] iArr = { 1, 2, 3 };
+            //打印iArr的地址
+            Console.WriteLine("iArr的地址：" + iArr.ToString());
+            Console.WriteLine("iArr的地址：" + iArr);
+        }
+        public class Person_20
+        {
+
         }
         #endregion
     }
