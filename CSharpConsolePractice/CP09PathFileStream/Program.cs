@@ -82,7 +82,22 @@ namespace CP09PathFileStream
             //Forms.Line("CP09_02");
             //PFS02File.CP09_02();
 
-            
+            #region CP09_03：File练习
+            /*
+             *  例程编号：CP09_03
+             *  摘要：
+             *      File练习
+             *  说明：
+             *      1）随便写着玩
+             *      2）如果绝对路径不是一个完整的路径，将会在程序所在文件夹创建文件。
+             *  步骤：
+             *      1）
+             */
+            #endregion
+            //Forms.Line("CP09_03");
+            //PFS02File.CP09_03();
+
+
         }
     }
 }
