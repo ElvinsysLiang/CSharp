@@ -252,47 +252,7 @@ namespace CP08ObjectOriented
             //Forms.Line("CP08_09");
             //OO03Polymorphism.CP08_09();
 
-            #region CP08_10：集合的例程
-            /*
-             *  例程编号：CP08_10
-             *  摘要：
-             *      集合的例程
-             *  说明：
-             *      1）数组和集合的区别
-             *          数组：只能放单一类型数据，长度固定
-             *          集合：能放多种类型数据，长度可变
-             *      2）创建集合  ArrayList arrList = new ArrayList();
-             *      3）需要加入  using System.Collections;
-             *      4）添加数据  ArrayList.Add(Int/Char/String/Int[]/Class...);
-             *      5）删除指定内容数据  ArrayList.Remove(String);
-             *      6）删除指定下标数据  ArrayList.RemoveAt(0);
-             *      7）删除下标范围数据  ArrayList.RemoveRange(0,3);
-             *      8）清空集合  ArrayList.Clear();
-             *      9）升序排列  ArrayList.sort();
-             *            无法对含有引用类型数据（包括Array和Classes）的集合进行排序
-             *            无法对含有不同类型数据的集合进行排序
-             *      10）顺序逆转  ArrayList.Reverse();
-             *      11）指定下标插入数据 ArrayList.Inser(0,String);
-             *            插入后，原数据及后面数据的位置往后推一位
-             *      12）指定下标插入数组 ArrayList.InserRange(0, new int[] { Int...});
-             *            ArrayList.Insert(2, iArr)ArrayList.InsertRange(3, iArr_1)的区别：
-             *            Insert()是把数组地址插入到指定下标位置
-             *            InsetRange()是把数组中的元素内容都按顺序插入到指定下标位置
-             *      13）指定下标插入集合 ArrayList.InserRange(0, new new ArrayList[]);
-             *            Insert()是把集合的地址插入到指定的下标位置
-             *            InsetRange()是把集合中的元素内容都按顺序插入到指定下标位置
-             *      14）判断指定下标是否包含一个元素   ArrayList.Contains(String);
-             *      15）如果数据是引用类型，如数组名或对象名，可以用is判断后，再处理
-             *  步骤：
-             *      1）创建一个集合，插入各种数据
-             *      2）int/double/decimal/string/char/bool/iArray/Person
-             */
-            #endregion
-            //Forms.Line("CP08_10");
-            //OO04ArrayList.CP08_10();
-
-
-
+            
         }
     }
 }

@@ -494,8 +494,134 @@ namespace CP02Types
              *      1）
              */
             #endregion
-            Forms.Line("CP02_19");
-            Ty06String.CP02_20();
+            //Forms.Line("CP02_19");
+            //Ty06String.CP02_20();
+
+            #region CP02_21：ArrayList的例程
+            /*
+             *  例程编号：CP02_21
+             *  摘要：
+             *      ArrayList的例程
+             *  说明：
+             *      1）数组和可变数组的区别
+             *          数组：只能放单一类型数据，长度固定
+             *          可变数组：能放多种类型数据，长度可变
+             *      2）创建可变数组  ArrayList arrList = new ArrayList();
+             *          需要在文件头加入using System.Collections;
+             *      3）添加数据  ArrayList.Add(Int/Char/String/Int[]/Class...);
+             *      4）添加数组  ArrayList.AddRange(new int[]{Int...});
+             *          ArrayList.Add(int[])和ArrayList.AddRange(int[])的区别
+             *            ArrayList.Add(int[])是把数组的地址添加到集合中
+             *            ArrayList.AddRange(int[])是把数组中的元素按顺序添加到集合中
+             *      5）删除指定内容数据  ArrayList.Remove(String);
+             *      6）删除指定下标数据  ArrayList.RemoveAt(0);
+             *      7）删除下标范围数据  ArrayList.RemoveRange(0,3);
+             *      8）清空集合  ArrayList.Clear();
+             *      9）升序排列  ArrayList.sort();
+             *          无法对含有引用类型数据（包括Array和Classes）的可变数组进行排序
+             *          无法对含有不同类型数据的可变数组进行排序
+             *      10）顺序逆转  ArrayList.Reverse();
+             *      11）指定下标插入数据 ArrayList.Insert(0,String);
+             *            插入后，原数据及后面数据的位置往后推一位
+             *      12）指定下标插入数组 ArrayList.InsertRange(0, new int[] { Int...});
+             *            ArrayList.Insert(2, iArr)ArrayList.InsertRange(3, iArr_1)的区别：
+             *            Insert()是把数组地址插入到指定下标位置
+             *            InsertRange()是把数组中的元素内容都按顺序插入到指定下标位置
+             *      13）指定下标插入可变数组 ArrayList.InsertRange(0, new new ArrayList[]);
+             *            Insert()是把集合的地址插入到指定的下标位置
+             *            InsertRange()是把集合中的元素内容都按顺序插入到指定下标位置
+             *      14）判断指定下标是否包含一个元素   ArrayList.Contains(String);
+             *      15）如果数据是引用类型，如数组名或对象名，可以用is判断后，再处理
+             *      16）？？？ArrayList.ToString(),输出的是什么？？？
+             *  步骤：
+             *      1）创建一个集合，插入各种数据
+             *      2）int/double/decimal/string/char/bool/iArray/Person
+             */
+            #endregion
+            //Forms.Line("CP02_21");
+            //Ty07ArrayList.CP02_21();
+
+            #region CP02_22：可变数组的长度
+            /*
+             *  例程编号：CP02_22
+             *  摘要：
+             *      可变数组的长度
+             *  说明：
+             *      1）ArrayList.Count()和ArrayList.Capacity()的区别：
+             *          Count是可变数组现有的元素的个数
+             *          Capacity是可变数组的容量，可以允许存储的元素个数
+             *          （集合的容量：当Count超过Capacity是，集合会自动增容：2，4，8，16，31...）
+             *  步骤：
+             *      1）
+             */
+            #endregion
+            //Forms.Line("CP02_22");
+            //Ty07ArrayList.CP02_22();
+
+            #region CP02_23：StringBuilder的例程
+            /*
+             *  例程编号：CP02_23
+             *  摘要：
+             *      StringBuilder的例程
+             *  说明：
+             *      1）字符串和可变字符串的区别
+             *          字符串：长度固定,每次修改进行赋值，实质上是在堆中创建新的字符串
+             *          可变字符串：长度可变，可进行追加/移除/替换/插入等操作
+             *      2）创建集合  StringBuilder strBuder = new StringBuilder();
+             *          需要在文件头加入using System.Text;
+             *      3）追加字符串 StringBuilder.Append(Int / Char / String);
+             *      4）追加数组 StringBuilder.AppendJoin(Char,StrBuilder);
+             *      5）删除下标范围字符 StringBuilder.Remove(Int,Int);
+             *      6）删除指定下标数据 StringBuilder.Insert(Int,Char);
+             *      7）替换指定内容字符 StringBuilder.Replace(Char,Char);
+             *      8）可变字符串大小 StringBuilder.Capacity;
+             *          其实容量，和集合一样，容量随着字符串的变化而双倍增加
+             *  步骤：
+             *      1）
+             */
+            #endregion
+            //Forms.Line("CP02_23");
+            //Ty08StringBuilder.CP02_23();
+
+            #region CP02_24：Hashtable的例程
+            /*
+             *  例程编号：CP02_24
+             *  摘要：
+             *      Hashtable的例程
+             *  说明：
+             *      1）Hashtable：非泛型，可放入任意类型数据作为键值对
+             *      2）创建Hashtable，需在文件头加入：using System.Collections;
+             *      3）添加数据  Hashtable.Add(Key,Value);
+             *      4）循环打印，按照DictionaryEntry键值对的方式，通过foreach打印
+             *          打印顺序不一定按照添加数据的顺序进行打印
+             *      5）根据键值删除数据  Hashtable.Remove(Key);
+             *      6）查询键值存在    Hahtable.Contains;
+             *      7）Hashtable的键值的集合   Hashtable.Keys
+             *      8）Hashtable的元素值的集合   Hashtable.Keys
+             *      9）Hashtable的大小   Hashtable.Count
+             *      10）清空Hashtable的所有元素  Hashtable.Clear()
+             *      11）键值类型是Int，而且从0开始按顺序，for循环打印
+             *  步骤：
+             *      1）
+             */
+            #endregion
+            //Forms.Line("CP02_24");
+            //Ty09Hashtable.CP02_24();
+
+            #region CP02_25：var的例程
+            /*
+             *  例程编号：CP02_25
+             *  摘要：
+             *      var的例程
+             *  说明：
+             *      1）var：推断数据类型
+             *      2）可以用在foreach上
+             *  步骤：
+             *      1）
+             */
+            #endregion
+            //Forms.Line("CP02_25");
+            //Ty10Var.CP02_25();
         }
     }
 }
