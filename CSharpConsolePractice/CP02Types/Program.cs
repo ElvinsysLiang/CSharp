@@ -10,7 +10,7 @@
 * CLR 版本 ：4.0.30319.42000
 * 作    者 ：Elvinsys
 * 创建时间 ：2020-02-03 16:09:18
-* 更新时间 ：2020-03-22 13:33:00
+* 更新时间 ：2020-03-25 11:32:00
 * 版 本 号 ：v1.0.0.0
 *******************************************************************
 * Copyright @ Elvinsys 2020. All rights reserved.
@@ -530,7 +530,7 @@ namespace CP02Types
              *      13）指定下标插入可变数组 ArrayList.InsertRange(0, new new ArrayList[]);
              *            Insert()是把集合的地址插入到指定的下标位置
              *            InsertRange()是把集合中的元素内容都按顺序插入到指定下标位置
-             *      14）判断指定下标是否包含一个元素   ArrayList.Contains(String);
+             *      14）判断是否包含一个指定元素   ArrayList.Contains(String);
              *      15）如果数据是引用类型，如数组名或对象名，可以用is判断后，再处理
              *      16）？？？ArrayList.ToString(),输出的是什么？？？
              *  步骤：
@@ -622,6 +622,90 @@ namespace CP02Types
             #endregion
             //Forms.Line("CP02_25");
             //Ty10Var.CP02_25();
+
+            #region CP02_26：List的例程
+            /*
+             *  例程编号：CP02_26
+             *  摘要：
+             *      List的例程
+             *  说明：
+             *      1）List和ArrayList的区别
+             *          List：泛型集合，数据类型固定的可变数组，数据类型不需要强转
+             *          ArrayList：能在同一集合中放不同的数据，对数据的处理一般需要强转
+             *          而数据的类型转换，一般伴随着拆箱和装箱的过程，影响程序执行效率
+             *      2）创建List List<int> intList = new List<int>();
+             *      3）添加数据 List.Add(Int / Char / String / Int[] / Class...);
+             *      4）添加数组 List.AddRange(new int[] { Int...});
+             *      5）删除指定内容数据 List.Remove(Int);
+             *          删除在List中不存在的数据，并不会抛异常
+             *      6）删除指定下标数据 List.RemoveAt(Index);
+             *      7）删除下标范围数据 List.RemoveRange(startIndex,endIndex);
+             *          超出范围，会抛异常
+             *      8）清空List List.Clear();
+             *          执行List.Clear()后，Count=0，而Capacity不变
+             *          List.RemoveAll();的用法？？？
+             *      9）升序排列 List.sort();
+             *          可对非引用数据类型（数组，类）的List进行升序排序（包括string）
+             *      10）顺序逆转 List.Reverse();
+             *      11）指定下标插入数据 List.Insert(Index, Int);
+             *          插入后，原数据及后面数据的位置往后推一位
+             *      12）指定下标插入数组 List.InsertRange(0, new int[] { Int...});
+             *          与ArrayList的区别：
+             *          因为List是泛型集合，不存在像ArrayList需要考虑添加数组地址还是数组各元素的问题
+             *      13）List的大小和容量 List.Count;  List.Capacity;
+             *          Count为List中元素的个数，Capacity为List的容量
+             *          Capacity随着个数的增加而双倍递增
+             *          执行List.Clear()后，Count=0，而Capacity不变
+             *      14）判断List中是否包含一个指定内容的元素 List.Contains(Int);
+             *  步骤：
+             *      1）
+             */
+            #endregion
+            //Forms.Line("CP02_26");
+            //Ty11List.CP02_26();
+
+            #region CP02_27：Dictionary的例程
+            /*
+             *  例程编号：CP02_27
+             *  摘要：
+             *      Dictionary的例程
+             *  说明：
+             *      1）与Hashtable的区别：
+             *          Dictionary：泛型键值对，键和值的数据类型都分别固定
+             *          Hashtable：非泛型键值对，键和值任意数据类型
+             *      2）新建Dictionary    Dictionary<int,string> = new Dictionary<int, string>();
+             *          因为继承自Object，因此不需要额外加文件头
+             *      3）添加数据 Dictionary.Add(Key, Value);
+             *      4）循环打印，按照DictionaryEntry键值对的方式，通过foreach打印
+             *          因为键值的类型固定，因此打印的顺序与添加数据顺序一样
+             *      5）根据键值删除数据 Dictionary.Remove(Key);
+             *      6）查询键值存在 Dictionary.ContainsKey(Key);
+             *      7）Dictionary的键值的集合 Dictionary.Keys
+             *      8）Dictionary的元素值的集合 Dictionary.Values
+             *      9）Dictionary的大小 Dictionary.Count
+             *      10）清空Dictionary的所有元素 Dictionary.Clear()
+             *      11）键值类型是Int，而且从0开始按顺序，for循环打印
+             *          如果是for循环，必须根据Key的升序或降序打印，对Key有严格要求
+             *  步骤：
+             *      1）
+             */
+            #endregion
+            //Forms.Line("CP02_27");
+            //Ty12Dictionary.CP02_27();
+
+            #region CP02_28：FileStream的例程
+            /*
+             *  例程编号：CP02_28
+             *  摘要：
+             *      FileStream的例程
+             *  说明：
+             *      1）
+             *  步骤：
+             *      1）
+             */
+            #endregion
+            Forms.Line("CP02_28");
+            Ty13FileStream.CP02_28();
         }
     }
 }

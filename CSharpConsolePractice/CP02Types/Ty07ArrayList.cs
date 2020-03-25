@@ -243,7 +243,7 @@ namespace CP02Types
 
             CP00Forms.Forms.Cut();
 
-            //判断指定下标是否包含一个元素 ArrayList.Contains(String);
+            //判断是否包含一个指定元素 ArrayList.Contains(String);
             Console.WriteLine("判断集合中是否包含“good”的字符串...");
             if (arrList.Contains("good"))
             {
