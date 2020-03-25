@@ -9,7 +9,7 @@
  * CLR 版本 ：4.0.30319.42000
  * 作    者 ：Elvinsys
  * 创建时间 ：2020-03-23 19:10:13
- * 更新时间 ：2020-03-24 10:48:00
+ * 更新时间 ：2020-03-24 19:24:00
  * 版 本 号 ：v1.0.0.0
  ****************************************************************
  * Copyright @ Elvinsys 2020. All rights reserved.
@@ -585,6 +585,131 @@ namespace CP09PathFileStream
             Console.WriteLine("按任意键返回主目录...");
             Console.ReadKey();
             Console.Clear();
+        }
+        #endregion
+
+        #region CP09_04：使用File实现多媒体文件的复制
+        /*
+         *  例程编号：CP09_04
+         *  摘要：
+         *      使用File实现多媒体文件的复制
+         *  说明：
+         *      1）其实就是一个读写操作
+         *      2）与一般的读写操作相比，不需要进行字符串的编码格式转换
+         *  步骤：
+         *      1）从多媒体文件中读取数据到字节数组中
+         *      2）把字节数组写入新建文件中
+         */
+        /// <summary>
+        /// 使用File实现多媒体文件的复制
+        /// </summary>
+        public static void CP09_04()
+        {
+            Console.WriteLine("请输入需要复制的多媒体文件名...");
+            string strOldFileName = Console.ReadLine();
+            Console.WriteLine("输入保存的位置...");
+            string strNewFileName = Console.ReadLine();
+            if (File.Exists(strOldFileName))
+            {
+                Console.WriteLine("开始执行复制操作...");
+                //读取文件为字节数组
+                byte[] bytBuff = File.ReadAllBytes(strOldFileName);
+                //写入文件
+                File.WriteAllBytes(strNewFileName, bytBuff);
+                Console.WriteLine("复制成功！");
+            }
+            else
+            {
+                Console.WriteLine("文件不存在。");
+            }
+
+        }
+        #endregion
+
+        #region CP09_05：File的其他功能
+        /*
+         *  例程编号：CP09_05
+         *  摘要：
+         *      File的其他功能
+         *  说明：
+         *      1）多行写入/插入/读取
+         *         File.WriteAllLines(strFileName, strArr); 
+         *         File.AppendAllLines(strFileName, strArrAppend);
+         *         string[] strArr_new = File.ReadAllLines(strFileName, Encoding.Default);
+         *      2）文档写入/插入/读取
+         *         File.WriteAllText(strFileName_2, strText);
+         *         File.AppendAllText(strFileName_2, strTextAppend);
+         *         string strText_new = File.ReadAllText(strFileName_2, Encoding.Default);
+         *  步骤：
+         *      1）
+         */
+        /// <summary>
+        /// File的其他功能
+        /// </summary>
+        public static void CP09_05()
+        {
+            //多行写入/插入/读取
+            //新建字符串数组
+            string[] strArr = new string[] { "1.这是第一行", "2.这是第二行", "3.这是第三行", "4.这是第四行" };
+            //新建文件d:\test_0325_1.txt
+            string strFileName = @"d:\test_0325_1.txt";
+            File.Create(strFileName).Close();
+            Console.WriteLine("成功创建文件{0}...", strFileName);
+            //把字符串数组逐行写入文件中
+            Console.WriteLine("按任意键进行字符串数组写入操作...");
+            Console.ReadKey();
+            File.WriteAllLines(strFileName, strArr);
+            Console.WriteLine("字符串数组写入成功...");
+            //追加字符串数组到文件中
+            Console.WriteLine("按任意键进行字符串数组追加操作...");
+            Console.ReadKey();
+            string[] strArrAppend = new string[] { "追加的第一行数据", "追加的第二行数据" };
+            File.AppendAllLines(strFileName, strArrAppend);
+            Console.WriteLine("追加字符串数组写入成功...");
+            //从文件中逐行读取数据到字符串数组中
+            Console.WriteLine("按任意键进行文件逐行数据读取...");
+            Console.ReadKey();
+            Console.WriteLine("开始逐行读取到字符串数组...");
+            string[] strArr_new = File.ReadAllLines(strFileName, Encoding.Default);
+            Console.WriteLine("循环打印字符串数组中数据...");
+            foreach (string str in strArr_new)
+            {
+                Console.WriteLine(str);
+            }
+            Console.WriteLine("文件逐行数据读取成功...");
+
+            CP00Forms.Forms.Cut();
+
+            //文档字符串写入/插入/读取
+            //新建文档字符串
+            string strText = "第一行：这是一个文档字符串，今天是2020年3月25日。\n" +
+                "第二行：这个字符串主要是用来测试File类中对于text文档的读写操作。\n" +
+                "第三行：昨天楼上又嘈到我睡觉了，不过今天起来跑完步，感觉精神状况还好吧。";
+            //新建文件d:\test_0325_2.txt
+            string strFileName_2 = @"d:\test_0325_2.txt";
+            File.Create(strFileName_2).Close();
+            Console.WriteLine("成功创建文件{0}...", strFileName_2);
+            //把文档字符串写入文件中
+            Console.WriteLine("按任意键进行文档字符串写入操作...");
+            Console.ReadKey();
+            File.WriteAllText(strFileName_2, strText);
+            Console.WriteLine("文档字符串写入成功...");
+            //追加文档字符串到文件中
+            Console.WriteLine("按任意键进行文档字符串追加操作...");
+            Console.ReadKey();
+            string strTextAppend = "追加到文档字符串的数据";
+            File.AppendAllText(strFileName_2, strTextAppend);
+            Console.WriteLine("追加文档字符串写入成功...");
+            //从文件中读取数据到文档字符串中
+            Console.WriteLine("按任意键进行文件数据读取...");
+            Console.ReadKey();
+            Console.WriteLine("开始读取数据到文档字符串...");
+            string strText_new = File.ReadAllText(strFileName_2, Encoding.Default);
+            Console.WriteLine("打印文档字符串...");
+            Console.WriteLine(strText_new);
+            Console.WriteLine("文档字符串读取成功...");
+
+
         }
         #endregion
 

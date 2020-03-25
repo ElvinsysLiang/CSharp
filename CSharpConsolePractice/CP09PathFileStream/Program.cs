@@ -97,6 +97,43 @@ namespace CP09PathFileStream
             //Forms.Line("CP09_03");
             //PFS02File.CP09_03();
 
+            #region CP09_04：使用File实现多媒体文件的复制
+            /*
+             *  例程编号：CP09_04
+             *  摘要：
+             *      使用File实现多媒体文件的复制
+             *  说明：
+             *      1）其实就是一个读写操作
+             *      2）与一般的读写操作相比，不需要进行字符串的编码格式转换
+             *  步骤：
+             *      1）从多媒体文件中读取数据到字节数组中
+             *      2）把字节数组写入新建文件中
+             */
+            #endregion
+            //Forms.Line("CP09_04");
+            //PFS02File.CP09_04();
+
+            #region CP09_05：File的其他功能
+            /*
+             *  例程编号：CP09_05
+             *  摘要：
+             *      File的其他功能
+             *  说明：
+             *      1）多行写入/插入/读取
+             *         File.WriteAllLines(strFileName, strArr); 
+             *         File.AppendAllLines(strFileName, strArrAppend);
+             *         string[] strArr_new = File.ReadAllLines(strFileName, Encoding.Default);
+             *      2）文档写入/插入/读取
+             *         File.WriteAllText(strFileName_2, strText);
+             *         File.AppendAllText(strFileName_2, strTextAppend);
+             *         string strText_new = File.ReadAllText(strFileName_2, Encoding.Default);
+             *  步骤：
+             *      1）
+             */
+            #endregion
+            //Forms.Line("CP09_05");
+            //PFS02File.CP09_05();
+
 
         }
     }
