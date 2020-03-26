@@ -25,11 +25,11 @@ namespace CP08ObjectOriented
 {
     public class OO03Polymorphism
     {
-        #region CP08_07：多态的例程
+        #region CP08_07：多态-里氏转换例程
         /*
          *  例程编号：CP08_07
          *  摘要：
-         *      多态的例程
+         *      多态-里氏转换
          *  说明：
          *      1）多态，符合里氏转换原则
          *      2）出现父类的地方完全能用子类代替
@@ -89,11 +89,11 @@ namespace CP08ObjectOriented
         }
         #endregion
 
-        #region CP08_08：多态的练习1
+        #region CP08_08：多态-里氏转换练习1
         /*
          *  例程编号：CP08_08
          *  摘要：
-         *      多态的练习1
+         *      多态-里氏转换练习1
          *  说明：
          *      1）is运算：父类对象 is 子类
          *      2）父类对象 is 父类，比人返回true，即便父类对象里面是子类对象
@@ -203,7 +203,8 @@ namespace CP08ObjectOriented
                 {
                     pArray[iVar].PersonSayHi();
                 }
-                else */if (pArray[iVar] is Student_08)
+                else */
+                if (pArray[iVar] is Student_08)
                 {
                     ((Student_08)pArray[iVar]).StudentSayHi();
                 }
@@ -258,7 +259,7 @@ namespace CP08ObjectOriented
         }
         #endregion
 
-        #region CP08_09：多态的练习2
+        #region CP08_09：多态-里氏转换练习2
         /*
          *  例程编号：CP08_09
          *  摘要：
@@ -285,9 +286,9 @@ namespace CP08ObjectOriented
             //创建random对象
             Random r = new Random();
             //循环创建子类对象，赋值到父类数组中
-            for(int i = 0; i < pArray.Length; i++)
+            for (int i = 0; i < pArray.Length; i++)
             {
-                switch(r.Next(0, 4))
+                switch (r.Next(0, 4))
                 {
                     case 0:
                         pArray[i] = new Teacher_09();
@@ -304,18 +305,21 @@ namespace CP08ObjectOriented
                 }
             }
             //循环输出父类数组中子类对象的对应的方法
-            for(int i = 0; i < pArray.Length; i++)
+            for (int i = 0; i < pArray.Length; i++)
             {
-                if(pArray[i] is Teacher_09)
+                if (pArray[i] is Teacher_09)
                 {
                     ((Teacher_09)pArray[i]).TeacherSayHi();
-                }else if(pArray[i] is Student_09)
+                }
+                else if (pArray[i] is Student_09)
                 {
                     ((Student_09)pArray[i]).StudentSayHi();
-                }else if(pArray[i] is Worker_09)
+                }
+                else if (pArray[i] is Worker_09)
                 {
                     ((Worker_09)pArray[i]).WorkerSayHi();
-                }else if(pArray[i] is Programmer_09)
+                }
+                else if (pArray[i] is Programmer_09)
                 {
                     ((Programmer_09)pArray[i]).ProgrammerSayHi();
                 }
@@ -355,6 +359,72 @@ namespace CP08ObjectOriented
         }
         #endregion
 
+        #region CP08_10：多态-虚方法
+        /*
+         *  例程编号：CP08_10
+         *  摘要：
+         *      多态-虚方法
+         *  说明：
+         *      1）虚方法：继承含有虚方法的类，必须实现该方法
+         *  步骤：
+         *      1）class Person
+         *          属性：StuName
+         *          方法：ShowInfo()
+         *          虚方法：virtual Eat()
+         *      2）class Student : Person
+         *          属性：StuName,StrGrade
+         *          方法：new ShowInfo()
+         *                override Eat()
+         */
+        public static void CP08_10()
+        {
+            Person_10 p1 = new Person_10("Jaco");
+            p1.ShowInfo();
+            p1.Eat();
+            CP00Forms.Forms.Cut();
 
+            Student_10 s1 = new Student_10("Lucy", "H1");
+            s1.ShowInfo();
+            s1.Eat();
+        }
+        public class Person_10
+        {
+            private string strName;
+            public Person_10() { }
+            public Person_10(string strName)
+            {
+                this.StrName = strName;
+            }
+            public void ShowInfo()
+            {
+                Console.WriteLine("原始人的名字叫{0}", StrName);
+            }
+            public virtual void Eat()
+            {
+                Console.WriteLine("原始人{0}人要吃肉。",StrName);
+            }
+
+            public string StrName { get => strName; set => strName = value; }
+        }
+        public class Student_10 : Person_10
+        {
+            private string strGrade;
+            public Student_10() { }
+            public Student_10(string strName, string strGrade) : base(strName)
+            {
+                this.StrGrade = strGrade;
+            }
+            public new void ShowInfo()
+            {
+                Console.WriteLine("学生的名字叫{0}，班级为{1}", StrName, StrGrade);
+            }
+            public override void Eat()
+            {
+                Console.WriteLine("学生{0}喜欢吃寿司。",StrName);
+            }
+
+            public string StrGrade { get => strGrade; set => strGrade = value; }
+        }
     }
+    #endregion
 }

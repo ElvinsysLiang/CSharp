@@ -18,8 +18,15 @@
 #endregion
 
 /*
- *  面向对象变成
- *      1.
+ *  面向对象编程
+ *      1）封装
+ *      2）继承
+ *      3）多态
+ *          1.里氏转换
+ *          2.虚方法
+ *          3.抽象类
+ *          4.接口
+ *          
  */
 
 using System;
@@ -187,11 +194,11 @@ namespace CP08ObjectOriented
             //Forms.Line("CP08_06");
             //OO02Inheritance.CP08_06();
 
-            #region CP08_07：多态的例程
+            #region CP08_07：多态-里氏转换
             /*
              *  例程编号：CP08_07
              *  摘要：
-             *      多态的例程
+             *      多态-里氏转换
              *  说明：
              *      1）多态，符合里氏转换原则
              *      2）出现父类的地方完全能用子类代替
@@ -207,11 +214,11 @@ namespace CP08ObjectOriented
             //Forms.Line("CP08_07");
             //OO03Polymorphism.CP08_07();
 
-            #region CP08_08：多态的练习1
+            #region CP08_08：多态-里氏转换练习1
             /*
              *  例程编号：CP08_08
              *  摘要：
-             *      多态的练习1
+             *      多态-里氏转换练习1
              *  说明：
              *      1）is运算：父类对象 is 子类
              *      2）父类对象 is 父类，比人返回true，即便父类对象里面是子类对象
@@ -231,7 +238,7 @@ namespace CP08ObjectOriented
             //Forms.Line("CP08_08");
             //OO03Polymorphism.CP08_08();
 
-            #region CP08_09：多态的练习2
+            #region CP08_09：多态-里氏转换练习2
             /*
              *  例程编号：CP08_09
              *  摘要：
@@ -252,7 +259,28 @@ namespace CP08ObjectOriented
             //Forms.Line("CP08_09");
             //OO03Polymorphism.CP08_09();
 
-            
+            #region CP08_10：多态-虚方法
+            /*
+             *  例程编号：CP08_10
+             *  摘要：
+             *      多态-虚方法
+             *  说明：
+             *      1）虚方法：继承含有虚方法的类，必须实现该方法
+             *  步骤：
+             *      1）class Person
+             *          属性：StuName
+             *          方法：ShowInfo()
+             *          虚方法：virtual Eat()
+             *      2）class Student : Person
+             *          属性：StuName,StrGrade
+             *          方法：new ShowInfo()
+             *                override Eat()
+             */
+            #endregion
+            //Forms.Line("CP08_10");
+            //OO03Polymorphism.CP08_10();
+
+
         }
     }
 }
