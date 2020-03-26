@@ -693,19 +693,7 @@ namespace CP02Types
             //Forms.Line("CP02_27");
             //Ty12Dictionary.CP02_27();
 
-            #region CP02_28：FileStream的例程
-            /*
-             *  例程编号：CP02_28
-             *  摘要：
-             *      FileStream的例程
-             *  说明：
-             *      1）
-             *  步骤：
-             *      1）
-             */
-            #endregion
-            Forms.Line("CP02_28");
-            Ty13FileStream.CP02_28();
+            
         }
     }
 }

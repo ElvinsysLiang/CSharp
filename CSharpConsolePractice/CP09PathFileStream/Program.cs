@@ -134,7 +134,82 @@ namespace CP09PathFileStream
             //Forms.Line("CP09_05");
             //PFS02File.CP09_05();
 
+            #region CP09_06：FileStream的例程
+            /*
+             *  例程编号：CP09_06
+             *  摘要：
+             *      FileStream的例程
+             *  说明：
+             *      1）使用FileStream，需要在文件头加入：using System.IO;
+             *      2）最好先定义作为缓存，用于读写的字节数组
+             *      3）写入数据
+             *          FileStream fsWrite = new FileStream(@"d:\fs.txt", FileMode.OpenOrCreate, FileAccess.Write);
+             *          把字符串转换成字节数组 byte[] bytArr = Encoding.Default.GetBytes(strFs);
+             *          进行写入操作  fsWrite.Write(bytArr, 0, bytArr.Length);
+             *          关闭FileStream   fsWrite.Close();
+             *          释放FileStream所占用的系统资源 fsWrite.Dispose();
+             *          所谓的系统资源，是指在使用异步读写的情况下，对系统其他资源发出请求而占用的资源，如管道，句柄使用等
+             *      2）读取数据
+             *          FileStream fsRead = new FileStream(@"d:\fs.txt", FileMode.OpenOrCreate, FileAccess.Read)
+             *          运用using语句，可以自动释放文件流占用的资源
+             *          读取文件的数据，放入字节数组中，并计算读取字节数    int iCount = fsRead.Read(bytBuff, 0, bytBuff.Length);
+             *          按照字节数，把以读取的字节数据转换成字符串   string strRead = Encoding.Default.GetString(bytBuff, 0, iCount);
+             *          重点：转换的个数是以读取的字节数计算
+             *                当一个文件大于字节数组是，可以用while循环进行读取
+             *      3）using语句的用法：
+             *          引入命名空间
+             *          对命名空间改名，使得多个功能类似的命名空间名称上更清晰
+             *          定义一个范围，使得范围内代码结束时，通知系统自动回收资源
+             *      4）using(){}/FileStream.Close()/FileStream.Dispose()三者区别
+             *          1.using(){}除了能用与FileStream以外，还能用于其他对象，但该对象必须继承IDisposable接口
+             *          因为FileStream.Dispose()继承了IDisposable接口，因此，无需要在显示进行FileStream.Close()进行资源释放
+             *          2.FileStream.Close()是暂时关闭了FileStream，一定时间没有操作，系统做资源回收，短时间内允许重新打开FileStream对象进行操作
+             *          3.FileStream.Dispose()是彻底释放FileStream对象占用的资源
+             *  步骤：
+             *      1）
+             */
+            #endregion
+            //Forms.Line("CP09_06");
+            //PFS03FileStream.CP09_06();
 
+            #region CP09_07：FileStream复制多媒体文件
+            /*
+             *  例程编号：CP09_07
+             *  摘要：
+             *      FileStream复制多媒体文件
+             *  说明：
+             *      1）用户输入源文件路径和目标文件路径
+             *      2）判断源文件是否存在
+             *      3）若存在，进行文件复制操作
+             *  步骤：
+             *      1）
+             */
+            #endregion
+            //Forms.Line("CP09_07");
+            //PFS03FileStream.CP09_07();
+
+            #region CP09_08：用FileStream进行文本文件读写
+            /*
+             *  例程编号：CP09_08
+             *  摘要：
+             *      StreamWriter/StreamReader
+             *  说明：
+             *      1）StreamWriter/StreamReader可用于进行文本的读写
+             *      2）可用using语句让系统自动回收资源
+             *      3）写入文本文件    StreamWriter sw = new StreamWriter(@"d:\sw.txt", true)
+             *          1.若文件不存在，则创建，若已存在，则不再创建
+             *          2.写入内容不会覆盖文档原有的内容
+             *          3.在写入内容时，把文件设置为只读形式
+             *      4）读取文本文件    StreamReader sr = new StreamReader(@"d:\sw.txt", true)
+             *          1.当行读取  sr.ReadLine()
+             *          2.多行读取  sr.ReadToEnd()  /   while(!sr.EndOfStream)sr.ReadToEnd();
+             *          3.sr.EndOfStream为只读属性，因此，每次对文本文件的读取最好重新创建StreamReader对象
+             *  步骤：
+             *      1）
+             */
+            #endregion
+            //Forms.Line("CP09_08");
+            //PFS04StreamWriterReader.CP09_08();
         }
     }
 }
