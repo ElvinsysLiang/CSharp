@@ -263,7 +263,7 @@ namespace CP08ObjectOriented
         /*
          *  例程编号：CP08_09
          *  摘要：
-         *      多态的练习2
+         *      多态-里氏转换练习2
          *  说明：
          *      1）父类Person_09
          *      2）子类Teacher_09 ：Person_09
@@ -277,7 +277,7 @@ namespace CP08ObjectOriented
          *      1）
          */
         /// <summary>
-        /// 多态的练习2
+        /// 多态-里氏转换练习2
         /// </summary>
         public static void CP08_09()
         {
@@ -365,7 +365,11 @@ namespace CP08ObjectOriented
          *  摘要：
          *      多态-虚方法
          *  说明：
-         *      1）虚方法：继承含有虚方法的类，必须实现该方法
+         *      1）继承含有虚方法的类，可以对虚方法进行重写，也可以不重写
+         *      2）子类需要对父类方法进行重写，父类该方法要么是虚方法，要么是抽象方法
+         *      3）虚方法与抽象方法的区别：
+         *          虚方法：    必须有方法体  可以在普通类中定义，也可在抽象类中    子类可重写父类虚方法，也可不重写  
+         *          抽象方法：  必须没方法体  必须在抽象类中定义                   子类必须父类的抽象方法重写     
          *  步骤：
          *      1）class Person
          *          属性：StuName
@@ -425,6 +429,179 @@ namespace CP08ObjectOriented
 
             public string StrGrade { get => strGrade; set => strGrade = value; }
         }
+        #endregion
+
+        #region CP08_11：多态-虚方法练习1-改良里氏转换练习2
+        /*
+         *  例程编号：CP08_11
+         *  摘要：
+         *      多态-虚方法练习1-改良里氏转换练习2
+         *  说明：
+         *      1）父类Person_11
+         *      2）子类Teacher_11 ：Person_11
+         *      3）子类Student_11 ：Person_11
+         *      4）子类Worker_11 ：Person_11
+         *      5）子类Programmer_11 ：Person_11
+         *      6）创建Person_11数组，元素个数10个
+         *      7）循环random把子类放到Person_11数组中
+         *      8）循环用数组中的子类打印信息
+         *  步骤：
+         *      1）
+         */
+
+        /// <summary>
+        /// 多态-虚方法练习1-改良里氏转换练习2
+        /// </summary>
+        public static void CP08_11()
+        {
+            //创建Person_11数组，元素个数10个
+            Person_11[] pArray = new Person_11[10];
+            //循环random把子类放到Person_11数组中
+            Random r = new Random();
+            int iRam;
+            for(int i = 0; i < pArray.Length; i++)
+            {
+                iRam = r.Next(0,4);
+                switch (iRam)
+                {
+                    case 0:
+                        pArray[i] = new Teacher_11();
+                        break;
+                    case 1:
+                        pArray[i] = new Student_11();
+                        break;
+                    case 2:
+                        pArray[i] = new Worker_11();
+                        break;
+                    case 3:
+                        pArray[i] = new Programmer_11();
+                        break;
+                }
+            }
+            //循环用数组中的子类打印信息
+            for(int i = 0; i < pArray.Length; i++)
+            {
+                pArray[i].SayHi();
+            }
+        }
+
+        /// <summary>
+        /// 父类Person_11
+        /// 虚方法必须有方法体（抽象方法没有方法体）
+        /// </summary>
+        public class Person_11
+        {
+            public virtual void SayHi()
+            {//虚方法必须有方法体（抽象方法没有方法体）
+                Console.WriteLine("Hi, I am a Human.");
+            }
+        }
+
+        /// <summary>
+        /// 子类Teacher_11
+        /// 重写虚方法SayHi()
+        /// </summary>
+        public class Teacher_11 : Person_11
+        {
+            public override void SayHi()
+            {
+                Console.WriteLine("Hi, I am a Teacher.");
+            }
+        }
+
+        /// <summary>
+        /// 子类Student_11
+        /// 重写虚方法SayHi()
+        /// </summary>
+        public class Student_11 : Person_11
+        {
+            public override void SayHi()
+            {
+                Console.WriteLine("Hi, I am a Student.");
+            }
+        }
+
+        /// <summary>
+        /// 子类Worker_11
+        /// 重写虚方法SayHi()
+        /// </summary>
+        public class Worker_11 : Person_11
+        {
+            public override void SayHi()
+            {
+                Console.WriteLine("Hi, I am a Worker.");
+            }
+        }
+
+        /// <summary>
+        /// 子类Programmer_11
+        /// 重写虚方法SayHi()
+        /// </summary>
+        public class Programmer_11 : Person_11
+        {
+            public override void SayHi()
+            {
+                Console.WriteLine("Hi, I am a Programmer.");
+            }
+        }
+        #endregion
+
+        #region CP08_12：多态-虚方法练习2-孔子爹案例
+        /*
+         *  例程编号：CP08_12
+         *  摘要：
+         *      多态-虚方法练习2-孔子爹案例
+         *  说明：
+         *      1）
+         *  步骤：
+         *      1）
+         */
+        /// <summary>
+        /// 多态-虚方法练习2-孔子爹案例
+        /// </summary>
+        public static void CP08_12()
+        {
+            //孔子装成他爹，向上转型
+            KongFather kf = new Kong();
+            Console.WriteLine("我是爹，我的年龄是" + kf.IAge);
+            kf.Teach();//用override重写，孔子只会教论语（子类的Teach方法
+            //kf.PlayGame();//无法玩游戏
+
+            //向下转型
+            Kong k = (Kong)kf;
+            Console.WriteLine("我是孔子，我的年龄是" + k.IAge1);
+            k.Teach();
+            k.PlayGame();
+        }
+        public class KongFather
+        {
+            //孔子爹50岁
+            private int iAge = 50;
+
+            public int IAge { get => iAge; }
+            //孔子爹会教Java
+            public virtual void Teach()
+            {
+                Console.WriteLine("我是爹，我会教Java。");
+            }
+        }
+        public class Kong : KongFather
+        {
+            //孔子20岁
+            private int iAge = 20;
+
+            public int IAge1 { get => iAge; set => iAge = value; }
+            //孔子会教论语
+            public override void Teach()
+            {
+                Console.WriteLine("我是孔子，我会教论语。");
+            }
+            //孔子特有的方法，玩游戏
+            public void PlayGame()
+            {
+                Console.WriteLine("我是孔子，我还会玩游戏。");
+            }
+        }
+        #endregion
     }
-    #endregion
 }

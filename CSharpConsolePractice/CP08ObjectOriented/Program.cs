@@ -265,7 +265,12 @@ namespace CP08ObjectOriented
              *  摘要：
              *      多态-虚方法
              *  说明：
-             *      1）虚方法：继承含有虚方法的类，必须实现该方法
+             *      1）继承含有虚方法的类，可以对虚方法进行重写，也可以不重写
+             *      2）子类需要对父类方法进行重写(override)，父类该方法要么是虚方法，要么是抽象方法
+             *      3）子类如果要覆盖父类的普通方法，需要加new
+             *      4）虚方法与抽象方法的区别：
+             *          虚方法：    必须有方法体  可以在普通类中定义，也可在抽象类中    子类可重写父类虚方法，也可不重写  
+             *          抽象方法：  必须没方法体  必须在抽象类中定义                   子类必须父类的抽象方法重写          
              *  步骤：
              *      1）class Person
              *          属性：StuName
@@ -279,6 +284,41 @@ namespace CP08ObjectOriented
             #endregion
             //Forms.Line("CP08_10");
             //OO03Polymorphism.CP08_10();
+
+            #region CP08_11：多态-虚方法练习1-改良里氏转换练习2
+            /*
+             *  例程编号：CP08_11
+             *  摘要：
+             *      多态-虚方法练习1-改良里氏转换练习2
+             *  说明：
+             *      1）父类Person_11
+             *      2）子类Teacher_11 ：Person_11
+             *      3）子类Student_11 ：Person_11
+             *      4）子类Worker_11 ：Person_11
+             *      5）子类Programmer_11 ：Person_11
+             *      6）创建Person_11数组，元素个数10个
+             *      7）循环random把子类放到Person_11数组中
+             *      8）循环用数组中的子类打印信息
+             *  步骤：
+             *      1）
+             */
+            #endregion
+            //Forms.Line("CP08_11");
+            //OO03Polymorphism.CP08_11();
+
+            #region CP08_12：多态-虚方法练习2-孔子爹案例
+            /*
+             *  例程编号：CP08_12
+             *  摘要：
+             *      多态-虚方法练习2-孔子爹案例
+             *  说明：
+             *      1）
+             *  步骤：
+             *      1）
+             */
+            #endregion
+            //Forms.Line("CP08_12");
+            //OO03Polymorphism.CP08_12();
 
 
         }
