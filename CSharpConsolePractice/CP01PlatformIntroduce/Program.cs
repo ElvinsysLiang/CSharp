@@ -215,8 +215,8 @@ namespace CP01PlatformIntroduce
              *      修饰符     返回值类型    方法名          参数类型    备注
              */
             #endregion
-            Forms.Line("CP01_06");
-            PI07Stopwatch.CP01_06();
+            //Forms.Line("CP01_06");
+            //PI07Stopwatch.CP01_06();
 
         }
     }

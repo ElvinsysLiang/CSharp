@@ -17,7 +17,7 @@ namespace CP00Forms
              *      抽象方法
              *      接口
              */
-
+            CP00TempPractice01.Test01();
         }
     }
 }
