@@ -45,9 +45,10 @@ namespace CP02Types
          *              字符型（char）
          *              布尔型（boolean）
          *      引用数据类型
+         *          数组
+         *          字符串
          *          类（class）
          *          接口（interface）
-         *          数组
          * 		2）下面主要测试是Byte,Short,Integer,Long,Float,Double,Charater，除此之外还有Boolean
          * 		3）包装类常用的常量和方法：_VALUE(取值范围),_toString(转为字符串)等等
          *  步骤：

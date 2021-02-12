@@ -64,7 +64,7 @@ namespace CP02Types
             const string str = "this is a string";
             const char ch = 'a';
             const byte bytNum = 1;//无法大于255
-            const short shoNum = 256;
+            const short shoNum = 256;//无法大于32767，共16位，第一位为符号位
             const int intNum = 123456789;
             const long lonNum = 12345678910;//在Java中要在末尾加L，C#不需要？
             const float floNum = 12.3456789F;//float浮点数需要在末尾加F

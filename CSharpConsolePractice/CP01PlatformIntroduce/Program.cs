@@ -54,8 +54,8 @@ namespace CP01PlatformIntroduce
              *      public static   void        ShowHelloWorld    null
              */
             #endregion
-            //Forms.Line("CP01_01");
-            //PI01HelloWorld.CP01_01();
+            Forms.Line("CP01_01");
+            PI01HelloWorld.CP01_01();
 
             #region CP01_02：C#中常用到的快捷键
             /*
