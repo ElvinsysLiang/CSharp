@@ -41,6 +41,7 @@ namespace Charpter04
              */
             Forms.Line("DA04_01");
             Chap04QuickSort.DA04_01();
+            Console.ReadKey();
         }
     }
 }
