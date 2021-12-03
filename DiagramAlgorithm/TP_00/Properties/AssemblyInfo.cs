@@ -1,15 +1,39 @@
-﻿using System.Reflection;
+﻿#region << 版 本 注 释 >>
+ /*----------------------------------------------------------------
+ * 项目名称 ：TP_00
+ * 项目描述 ：
+ * 类 名 称 ：AssemblyInfo.cs
+ * 类 描 述 ：
+ * 命名空间 ：%Namespace%
+ * 作    者 ：NEETJIN
+ * 创建时间 ：2021-12-3 12:11
+ * 更新时间 ：2021-12-3 12:11
+ * 版 本 号 ：V0.0.0.1
+ * ======================================
+ * 历史更新记录
+ * 版 本 号：V         
+ * 修改时间：         
+ * 修改人：
+ * 修改内容：
+ * ======================================
+ *******************************************************************
+ * Copyright @ NEETJIN 2021-2022. All rights reserved.
+ *******************************************************************
+ //----------------------------------------------------------------*/
+ #endregion << 版 本 注 释 >>
+
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("TP_01")]
+[assembly: AssemblyTitle("TP_00")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TP_01")]
+[assembly: AssemblyProduct("TP_00")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +44,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("c75ed2e8-0302-46e7-8e76-14c797dc37dc")]
+[assembly: Guid("5038fe09-0737-48a0-88cd-1115fa16dcf1")]
 
 // 程序集的版本信息由下列四个值组成: 
 //
