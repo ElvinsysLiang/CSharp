@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5038FE09-0737-48A0-88CD-1115FA16DCF1}</ProjectGuid>
+    <ProjectGuid>{313C3BA9-F34A-4F9E-8D7C-C61C1A1E669C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TP_00</RootNamespace>
-    <AssemblyName>TP_00</AssemblyName>
+    <RootNamespace>DA00Forms</RootNamespace>
+    <AssemblyName>DA00Forms</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,17 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DA00Forms\DA00Forms.csproj">
-      <Project>{313c3ba9-f34a-4f9e-8d7c-c61c1a1e669c}</Project>
-      <Name>DA00Forms</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
