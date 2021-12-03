@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DEA4D8ED-94D2-4754-940C-99ACDA27180A}</ProjectGuid>
+    <ProjectGuid>{F41E48B1-C245-467C-B610-D8E271601E97}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Charpter01</RootNamespace>
-    <AssemblyName>Charpter01</AssemblyName>
+    <RootNamespace>Charpter02</RootNamespace>
+    <AssemblyName>Charpter02</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chap01BinarySearch.cs" />
+    <Compile Include="Chap02SelectionSearch.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
