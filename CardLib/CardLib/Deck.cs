@@ -21,6 +21,7 @@ namespace CardLib
             }
         }
 
+        /* 
         public Card GetCard(int cardNum)
         {
             if (cardNum >= 0 && cardNum <= 51)
@@ -30,6 +31,7 @@ namespace CardLib
             else
                 throw (new System.ArgumentOutOfRangeException("cardNum", cardNum, "Value must be between 0 and 51."));
         }
+        */
 
         public void Shuffle()
         {
