@@ -64,7 +64,7 @@ namespace Charpter02
             }
         }
         /// <summary>
-        /// 选择排序算法—1
+        /// 选择排序算法_1
         /// </summary>
         /// <param name="arr">需要排序的数组</param>
         /// <returns>返回一个新的已经排序的数组</returns>
@@ -90,6 +90,11 @@ namespace Charpter02
             }
             return arrNew;
         }
+        /// <summary>
+        /// 选择排序算法_2
+        /// </summary>
+        /// <param name="arr">需要排序的数组</param>
+        /// <returns>返回一个新的已经排序的数组</returns>
 
         public static int[] SelectionSort_2(int[] arr)
         {
@@ -102,18 +107,20 @@ namespace Charpter02
             for(int i = 0; i < arrNew.Length - 1; i++)
             {
                 smallestIndex = i;
-                for(int j = 0; j < arrNew.Length; j++)
+                for(int j = i+1; j < arrNew.Length; j++)
                 {
                     if (arrNew[smallestIndex] > arrNew[j])
                     {
                         smallestIndex = j;
                     }
                 }
-                temp = arrNew[i];
-                arrNew[i] = arrNew[smallestIndex];
-                arrNew[smallestIndex] = temp;
+                if (i != smallestIndex)
+                {
+                    temp = arrNew[i];
+                    arrNew[i] = arrNew[smallestIndex];
+                    arrNew[smallestIndex] = temp;
+                }
             }
-
             return arrNew;
         }
     }
