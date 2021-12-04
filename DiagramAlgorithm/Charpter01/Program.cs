@@ -37,7 +37,7 @@ namespace Charpter01
         {
             /*
              *  例程编号：DA01_01
-             *  摘要：二分查找算法
+             *  摘要：二分查找算法,要求查找的序列必须为已排序
              */
             Forms.Line("DA01_01");
             Chap01BinarySearch.DA01_01();
