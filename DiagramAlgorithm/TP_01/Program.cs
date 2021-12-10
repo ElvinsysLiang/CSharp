@@ -38,9 +38,31 @@ namespace TP_01//用于测试或日常练手，建立的测试实例
             int[] arrQS = { 0, 48, 24, 12, 13, 85 };
             int[] arrBS = { 0, 12, 13, 24, 48, 85 };
 
-            //测试实例：???
-            Forms.Line("???");
-            Forms.End();
+            //测试用例：键值对，字典
+            //建立键值对
+            Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
+            //插入数据
+            keyValuePairs.Add("Jaco", "1985-11");
+            keyValuePairs.Add("Lucy", "1981-1");
+            keyValuePairs.Add("Mike", "1982-2");
+            //遍历键值对
+            foreach(var kvp in keyValuePairs)
+            {
+                Console.Write(kvp + " ");
+            }
+            Console.WriteLine();
+            //遍历键的值
+            foreach(string s in keyValuePairs.Keys)
+            {
+                Console.Write(s + " ");
+            }
+            Console.WriteLine();
+            //遍历值
+            foreach(string s in keyValuePairs.Values)
+            {
+                Console.Write(s + " ");
+            }
+            Console.WriteLine();
 
             Console.ReadKey();
         }

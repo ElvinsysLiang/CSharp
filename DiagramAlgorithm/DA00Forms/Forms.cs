@@ -65,5 +65,30 @@ namespace DA00Forms
         {
             Console.WriteLine("*********************************************************************");
         }
+
+        public static void PrintArr(int[] vars)
+        {
+            foreach(var i in vars)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+        }
+        public static void PrintArr(double[] vars)
+        {
+            foreach (var i in vars)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+        }
+        public static void PrintArr(float[] vars)
+        {
+            foreach (var i in vars)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+        }
     }
 }
