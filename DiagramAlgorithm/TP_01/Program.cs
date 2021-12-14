@@ -38,33 +38,117 @@ namespace TP_01//用于测试或日常练手，建立的测试实例
             int[] arrQS = { 0, 48, 24, 12, 13, 85 };
             int[] arrBS = { 0, 12, 13, 24, 48, 85 };
 
-            //测试用例：键值对，字典
-            //建立键值对
-            Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
-            //插入数据
-            keyValuePairs.Add("Jaco", "1985-11");
-            keyValuePairs.Add("Lucy", "1981-1");
-            keyValuePairs.Add("Mike", "1982-2");
-            //遍历键值对
-            foreach(var kvp in keyValuePairs)
+            //测试用例：散列表
+            //创建散列表（键值对）
+            Console.WriteLine("Create KeyValuePairs list...");
+            Dictionary<string, string> birthdayList =
+                new Dictionary<string, string>();
+            Console.WriteLine("Create KeyValuePairs list succeed! Named " +
+                "birthdayList.");
+            Forms.End();
+            //给散列表添加数据
+            Console.WriteLine("Updata to KeyValuePairs...");
+            birthdayList.Add("Jaco", "1985-01");
+            birthdayList.Add("Lucy", "1986-02");
+            birthdayList.Add("Big guy", "1980-05");
+            birthdayList.Add("Mico", "1990-08");
+            Console.WriteLine("Updata succeed!");
+            Forms.End();
+
+            //查询单个数据（先检查这个数据是否存在）
+            Console.WriteLine("Search a data from KeyValuePairs...");
+            if (birthdayList.ContainsKey("Jaco"))
             {
-                Console.Write(kvp + " ");
+                Console.WriteLine("Search Jaco's data succeed!");
+                Console.WriteLine("Jaco's birthday is " + birthdayList["Jaco"]);
             }
-            Console.WriteLine();
-            //遍历键的值
-            foreach(string s in keyValuePairs.Keys)
+            else
+            {
+                Console.WriteLine("Search Jaco's data failed!");
+                Console.WriteLine("Jaco's data is not exist.");
+            }
+            Forms.End();
+
+            //删除单个数据
+            Console.WriteLine("Remove a data from KeyValuePairs...");
+            if (birthdayList.ContainsKey("Jaco"))
+            {
+                birthdayList.Remove("Jaco");
+                if (birthdayList.ContainsKey("Jaco") == false)
+                {
+                    Console.WriteLine("Remove Jaco's data succeed!");
+                }
+                else
+                {
+                    Console.WriteLine("Remove failed!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Remove Jaco's data failed!");
+                Console.WriteLine("Jaco's is not exist!");
+            }
+            Forms.End();
+
+            //遍历散列表
+            Console.WriteLine("Traversal KeyValuePair...");
+            foreach (KeyValuePair<string, string> kvp in birthdayList)
+            {
+                Console.WriteLine($"{kvp.Key}'s birthday is {kvp.Value}.");
+            }
+            Forms.End();
+
+            //遍历散列表的键
+            Console.WriteLine("Traversal KeyValuePairs Keys...");
+            //方法1
+            Console.WriteLine("Method_1");
+            foreach (string s in birthdayList.Keys)
             {
                 Console.Write(s + " ");
             }
             Console.WriteLine();
-            //遍历值
-            foreach(string s in keyValuePairs.Values)
+            //方法2
+            Console.WriteLine("Method_2");
+            Dictionary<string, string>.KeyCollection kc = birthdayList.Keys;
+            foreach (string s in kc)
             {
                 Console.Write(s + " ");
             }
             Console.WriteLine();
+            Forms.End();
+
+            //遍历散列表的值
+            Console.WriteLine("Traversal KeyValuePairs Values...");
+            //方法1
+            Console.WriteLine("Method_1");
+            foreach (string s in birthdayList.Values)
+            {
+                Console.Write(s + " ");
+            }
+            Console.WriteLine();
+            //方法2
+            Console.WriteLine("Method_2");
+            Dictionary<string, string>.ValueCollection vc = birthdayList.Values;
+            foreach (string s in vc)
+            {
+                Console.Write(s + " ");
+            }
+            Console.WriteLine();
+            Forms.End();
+
+            //修改Lucy的数据
+            Console.WriteLine("updata a data ...");
+            Console.WriteLine("before updata:");
+            Console.WriteLine($"Lucy's birthday is {birthdayList["Lucy"]}");
+            Console.WriteLine("after updata:");
+            birthdayList["Lucy"] = "1988-06";
+            Console.WriteLine($"Lucy's birthday is {birthdayList["Lucy"]}");
+            Forms.End();
 
             Console.ReadKey();
         }
+
+
+
     }
 }

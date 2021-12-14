@@ -36,7 +36,7 @@ namespace TP_00
     {
         static void Main(string[] args)
         {
-            Forms.Line("Algorithm");
+            Forms.Title("Algorithm");
             //测试实例001：二分查找
             int[] arr = { 11, 44, 53, 75, 99 };
             foreach (int i in arr)

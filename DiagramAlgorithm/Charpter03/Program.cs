@@ -39,7 +39,7 @@ namespace Charpter03
              *  例程编号：DA03_01
              *  摘要：递归，阶乘
              */
-            Forms.Line("DA03_01");
+            Forms.Title("DA03_01");
             Chap03Recursion.DA03_01();
             Console.ReadKey();
         }

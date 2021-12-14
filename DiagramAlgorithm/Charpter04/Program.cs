@@ -39,7 +39,7 @@ namespace Charpter04
              *  例程编号：DA04_01
              *  摘要：分而治之思想，快速排序
              */
-            Forms.Line("DA04_01");
+            Forms.Title("DA04_01");
             Chap04QuickSort.DA04_01();
             Console.ReadKey();
         }

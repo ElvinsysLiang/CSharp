@@ -42,20 +42,25 @@ namespace DA00Forms
     public class Forms
     {
         /// <summary>
-        /// 例程分割线
+        /// 例程文件头
         /// </summary>
-        /// <param name="str">例程编号</param>
-        public static void Line(string str)
+        /// <param name="str">例程名称或编号</param>
+        public static void Title(string str)
         {
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("*-------------------------开始测试  " + str + "-------------------------*");
             Console.WriteLine("**************************************************************************");
         }
-
+        /// <summary>
+        /// 分割线
+        /// </summary>
+        public static void Line()
+        {
+            Console.WriteLine("**************************************************************************");
+        }
         public static void End()
         {
             Console.WriteLine("*------------------------------------------------------------------------*");
-            Console.WriteLine();
         }
         /// <summary>
         /// 例程分割线

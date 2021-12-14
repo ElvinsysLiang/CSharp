@@ -39,7 +39,7 @@ namespace Charpter05
              *  例程编号：DA05_01
              *  摘要：散列表，键值对，字典
              */
-            Forms.Line("DA05_01");
+            Forms.Title("DA05_01");
             Chap05KeyValuePair.DA05_01();
             Console.ReadKey();
         }

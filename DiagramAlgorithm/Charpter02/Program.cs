@@ -41,7 +41,7 @@ namespace Charpter02
              *  摘要：选择排序算法
              */
             #endregion
-            Forms.Line("DA02_01");
+            Forms.Title("DA02_01");
             Chap02SelectionSort.DA02_01();
             Console.ReadKey();
 
