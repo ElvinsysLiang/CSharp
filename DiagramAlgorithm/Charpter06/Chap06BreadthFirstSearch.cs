@@ -62,6 +62,7 @@ namespace Charpter06
 
         private static void BFS_1()
         {
+            string name;
             Animal you = new Animal("you");
             Animal claire = new Animal("claire");
             Animal bob = new Animal("bob");
@@ -76,9 +77,10 @@ namespace Charpter06
             bob.Friends = new Animal[] { anuj, peggy };
             alice.Friends = new Animal[] { peggy };
 
-            BFS(you);
+            Console.WriteLine("step is: " + BFS(you, out name));
+            Console.WriteLine("his name is: " + name);
         }
-        private static int BFS(Animal animal)
+        private static int BFS(Animal animal, out string name)
         {
             Animal anichk;
             Queue q = new Queue();
@@ -92,15 +94,23 @@ namespace Charpter06
                 if (anichk.Finded != true)
                 {
                     anichk.Finded = true;
-                    Console.WriteLine(anichk.Name);//检查最后一个字符
+                    if (anichk.Name.Substring(anichk.Name.Length - 1) == "m")
+                    {
+                        name = anichk.Name;
+                        return anichk.Step;
+                    }
+                    else
+                    {
+                        InsertFriends(anichk, q);
+                    }
                 }
             }
-            
+            name = "no one";
             return -1;
         }
         private static void InsertFriends(Animal animal, Queue q)
         {
-            for(int i = 0; i < animal.Friends.Length; i++)
+            for (int i = 0; i < animal.Friends.Length; i++)
             {
                 q.Enqueue(animal.Friends[i]);
                 animal.Friends[i].Step = animal.Step + 1;

@@ -39,6 +39,8 @@ namespace TP_01//用于测试或日常练手，建立的测试实例
             int[] arrQS = { 0, 48, 24, 12, 13, 85 };
             int[] arrBS = { 0, 12, 13, 24, 48, 85 };
 
+            string s = "good";
+            Console.WriteLine(s.Substring(s.Length - 1));
             Console.ReadKey();
         }
     }
