@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8CB06CBE-DF61-42A4-8647-727426CA6B07}</ProjectGuid>
+    <ProjectGuid>{67C6B470-DD86-4F76-AE0F-5F54B552CCA2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Charpter05</RootNamespace>
-    <AssemblyName>Charpter05</AssemblyName>
+    <RootNamespace>Charpter06</RootNamespace>
+    <AssemblyName>Charpter06</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chap05KeyValuePair.cs" />
-    <Compile Include="Chap05Notebook.cs" />
-    <Compile Include="Chap05Vote.cs" />
+    <Compile Include="Chap06Queue.cs" />
+    <Compile Include="Chap06Queue_2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
