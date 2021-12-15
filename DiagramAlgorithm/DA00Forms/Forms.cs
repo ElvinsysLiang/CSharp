@@ -36,6 +36,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace DA00Forms
 {
@@ -73,6 +74,7 @@ namespace DA00Forms
 
         public static void PrintArr(int[] vars)
         {
+            Console.WriteLine("Print the array:");
             foreach(var i in vars)
             {
                 Console.Write(i + " ");
@@ -81,6 +83,7 @@ namespace DA00Forms
         }
         public static void PrintArr(double[] vars)
         {
+            Console.WriteLine("Print the array:");
             foreach (var i in vars)
             {
                 Console.Write(i + " ");
@@ -89,6 +92,34 @@ namespace DA00Forms
         }
         public static void PrintArr(float[] vars)
         {
+            Console.WriteLine("Print the array:");
+            foreach (var i in vars)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+        }
+        public static void PrintArr(char[] vars)
+        {
+            Console.WriteLine("Print the array:");
+            foreach (var i in vars)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+        }
+        public static void PrintArr(object[] vars)
+        {
+            Console.WriteLine("Print the array:");
+            foreach (var i in vars)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+        }
+        public static void PrintArr(Queue[] vars)
+        {
+            Console.WriteLine("Print the array:");
             foreach (var i in vars)
             {
                 Console.Write(i + " ");

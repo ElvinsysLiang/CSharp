@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chap06BreadthFirstSearch.cs" />
     <Compile Include="Chap06Queue.cs" />
     <Compile Include="Chap06Queue_2.cs" />
     <Compile Include="Program.cs" />
