@@ -183,11 +183,24 @@ namespace TP_01//用于测试或日常练手，建立的测试实例
             int[] arrQS = { 0, 48, 24, 12, 13, 85 };
             int[] arrBS = { 0, 12, 13, 24, 48, 85 };
 
+            //测试实例：二分查找
+            //测试实例：选择排序
+            //测试实例：递归阶乘
+            //测试实例：快速排序
+            //测试实例：散列表用法
             //测试实例：广度优先算法
             //测试实例：Dijkstra算法
 
-
+            //测试实例：交集
+            List<int> list_1 = new List<int>() { 1, 2, 3, 5, 7, 9 };
+            List<int> list_2 = new List<int>() { 2, 4, 6, 8, 9, 10 };
+            //IEnumerable<int> ulist = list_1.Union(list_2);
+            int[] arr = list_1.Union(list_2).ToArray();
+            foreach (int temp in arr)
+            {
+                Console.WriteLine(temp);
+            }
             Console.ReadKey();
         }
-
+    }
 }
