@@ -30,65 +30,85 @@ using System.Threading.Tasks;
 
 namespace Charpter07
 {
-    class Node
-    {
-        //名称（好像不需要？
-        //邻居键值对
-        public Dictionary<Node, int> friends = new Dictionary<Node, int>();
-        //是否被处理过
-        public bool check;
-        public Node()
-        {
-            check = false;
-        }
-    }
-
     class Chap07Dijkstra
     {
         public static void DA07_01()
         {
-            //测试实例：Dijkstra算法
-            //创建节点
-            Node start = new Node();
-            Node end = new Node();
-            Node a = new Node();
-            Node b = new Node();
-            //加入各节点的邻居
-            start.friends.Add(a, 6);
-            start.friends.Add(b, 2);
-            a.friends.Add(end, 1);
-            b.friends.Add(a, 3);
-            b.friends.Add(end, 5);
+            //初始化图
+            Node start = new Node("start");
+            Node end = new Node("end");
+            Node a = new Node("a");
+            Node b = new Node("b");
+            //初始化邻居节点
+            start.Neighbour.Add(a, 6);
+            start.Neighbour.Add(b, 2);
+            a.Neighbour.Add(end, 1);
+            b.Neighbour.Add(a, 3);
+            b.Neighbour.Add(end, 5);
             //创建费用表
             Dictionary<Node, int> dCost = new Dictionary<Node, int>();
             dCost.Add(a, 6);
             dCost.Add(b, 2);
             dCost.Add(end, int.MaxValue);
-            //父节点记录表（好像不需要？
-            Node tNode = GetLowestCostNode(dCost);
-            while (tNode != null)
-            {
-                tNode.check = true;
-                foreach (KeyValuePair<Node, int> kvp in tNode.friends)
-                {
-                    if (kvp.Value + dCost[tNode] < dCost[kvp.Key])
-                    {
-                        dCost[kvp.Key] = kvp.Value + dCost[tNode];
-                    }
-                }
-                tNode = GetLowestCostNode(dCost);
-            }
-            Console.WriteLine("cost is: " + dCost[end]);
+            //创建父节点表
+            Dictionary<Node, Node> dParent = new Dictionary<Node, Node>();
+            dParent.Add(a, start);
+            dParent.Add(b, start);
+            dParent.Add(end, null);
+            //求起点到终点的最短距离
+            Console.WriteLine("The distance of start to end is: " +
+                GetLowestCost(end, dCost, dParent));
+            //求起点到终点的最短路径
+            PrintRoute(end, dParent);
         }
 
 
-        public static Node GetLowestCostNode(Dictionary<Node, int> dCost)
+        private static void PrintRoute(Node node, Dictionary<Node, Node> dParent)
+        {
+            if (node.Name == "start")
+            {
+                Console.Write("start->");
+            }
+            else
+            {
+                PrintRoute(dParent[node], dParent);
+                if (node.Name == "end")
+                {
+                    Console.WriteLine("end");
+                }
+                else
+                {
+                    Console.Write(node.Name + "->");
+                }
+            }
+        }
+
+        private static int GetLowestCost(Node end, Dictionary<Node, int> dCost, Dictionary<Node, Node> dParent)
+        {
+            Node tNode = GetLowestNode(dCost);
+            while (tNode != null)
+            {
+                tNode.Check = true;
+                foreach (KeyValuePair<Node, int> kvp in tNode.Neighbour)
+                {
+                    if ((dCost[tNode] + kvp.Value) < dCost[kvp.Key])
+                    {
+                        dCost[kvp.Key] = dCost[tNode] + kvp.Value;
+                        dParent[kvp.Key] = tNode;
+                    }
+                }
+                tNode = GetLowestNode(dCost);
+            }
+            return dCost[end];
+        }
+
+        private static Node GetLowestNode(Dictionary<Node, int> dCost)
         {
             Node tNode = null;
             int tCost = int.MaxValue;
             foreach (KeyValuePair<Node, int> kvp in dCost)
             {
-                if (kvp.Value < tCost && kvp.Key.check == false)
+                if (kvp.Key.Check != true && kvp.Value < tCost)
                 {
                     tCost = kvp.Value;
                     tNode = kvp.Key;
@@ -96,5 +116,20 @@ namespace Charpter07
             }
             return tNode;
         }
+    }
+    class Node
+    {
+        private string _name;
+        private bool _check;
+        private Dictionary<Node, int> _neighbour;
+        public Node(string name)
+        {
+            _name = name;
+            _check = false;
+            _neighbour = new Dictionary<Node, int>();
+        }
+        public string Name { get => _name; set => _name = value; }
+        public bool Check { get => _check; set => _check = value; }
+        internal Dictionary<Node, int> Neighbour { get => _neighbour; set => _neighbour = value; }
     }
 }

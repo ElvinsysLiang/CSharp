@@ -55,11 +55,11 @@ namespace DA00Forms
         /// <summary>
         /// 分割线
         /// </summary>
-        public static void Line()
+        public static void End()
         {
             Console.WriteLine("**************************************************************************");
         }
-        public static void End()
+        public static void Line()
         {
             Console.WriteLine("*------------------------------------------------------------------------*");
         }
