@@ -37,15 +37,27 @@ namespace Charpter08
         {
             /*
              *  例程编号：DA08_01
-             *  摘要：贪婪算法，集合覆盖问题
+             *  摘要：集合操作
+             *  说明：
+             *      1）交集
+             *      2）差集
+             *      3）并集
+             *  步骤：
+             *      1）
+             */
+            //Forms.Title("DA08_01,GatherOperation");
+            //Chap08GatherOperation.DA08_01();
+
+            /*
+             *  例程编号：DA08_02
+             *  摘要：贪婪算法
              *  说明：
              *      1）
              *  步骤：
              *      1）
              */
-            Forms.Title("DA08_01,List Cover");
-            Chap08ListCover.DA08_01();
-
+            Forms.Title("贪婪算法");
+            Chap08ListCover.DA08_02();
             Console.ReadKey();
         }
     }

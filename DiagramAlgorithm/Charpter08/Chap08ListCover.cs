@@ -28,44 +28,143 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DA00Forms;
 
 namespace Charpter08
 {
     class Chap08ListCover
     {
-        public static void DA08_01()
+        public static void DA08_02()
         {
             //初始化区域
-            List<string> states_needed = new List<string>()
-            { "mt","wa","or","id","nv","ut","ca","az"};
-            foreach (string s in states_needed)
+            string[] statesNeeded = { "mt", "wa", "or", "id", "nv", "ut", "ca", "az" };
+            Forms.PrintArr(statesNeeded);
+            #region oldCode
+            //初始化区域
+            //List<string> states_needed = new List<string>()
+            //{ "mt","wa","or","id","nv","ut","ca","az"};
+            //foreach (string s in states_needed)
+            //{
+            //    Console.WriteLine(s);
+            //}
+            //List<string> kone = new List<string>()
+            //{ "id","nv","ut"};
+            //List<string> ktwo = new List<string>()
+            //{ "wa","id","mt"};
+            //List<string> kthree = new List<string>()
+            //{ "or","nv","ca"};
+            //List<string> kfour = new List<string>()
+            //{ "nv","ut"};
+            //List<string> kfive = new List<string>()
+            //{ "ca","az"};
+            //ArrayList stationList = new ArrayList()
+            //{ kone,ktwo,kthree,kfour,kfive};
+
+            //ArrayList bestStationList = GetBestStationList(stationList, states_needed);
+
+            //Console.WriteLine("The bestStation have:");
+            //foreach(var bs in bestStationList)
+            //{
+            //    Console.Write(bs.ToString() + " ");
+            #endregion
+            //初始化站点
+            Station kone = new Station("kone");
+            Station ktwo = new Station("ktwo");
+            Station kthree = new Station("kthree");
+            Station kfour = new Station("kfour");
+            Station kfive = new Station("kfive");
+            //创建站点数组
+            Station[] stationList = { kone, ktwo, kthree, kfour, kfive };
+            //初始化各站点的覆盖范围
+            kone.CoverArea = new string[] { "id", "nv", "ut" };
+            ktwo.CoverArea = new string[] { "wa", "id", "mt" };
+            kthree.CoverArea = new string[] { "or", "nv", "ca" };
+            kfour.CoverArea = new string[] { "nv", "ut" };
+            kfive.CoverArea = new string[] { "ca", "az" };
+
+            //利用贪心算法，求覆盖所有洲的电台
+            List<Station> BestStationList = GetBestStationList(stationList, statesNeeded);
+            Console.WriteLine("The best station is:");
+            foreach (Station s in BestStationList)
             {
-                Console.WriteLine(s);
+                Console.Write(s.Name + " ");
             }
-            //states_needed.Add("mt");
-            //states_needed.Add("wa");
-            //states_needed.Add("or");
-            //states_needed.Add("id");
-            //states_needed.Add("nv");
-            //states_needed.Add("ut");
-            //states_needed.Add("ca");
-            //states_needed.Add("az");
-            List<string> kone = new List<string>()
-            { "id","nv","ut"};
-            List<string> ktwo = new List<string>()
-            { "wa","id","mt"};
-            List<string> kthree = new List<string>()
-            { "or","nv","ca"};
-            List<string> kfour = new List<string>()
-            { "nv","ut"};
-            List<string> kfive = new List<string>()
-            { "ca","az"};
-            ArrayList stationsList = new ArrayList()
-            { kone,ktwo,kthree,kfour,kfive};
-
-            //用类来表示station，属性是泛型集合？
-
+            Console.WriteLine();
 
         }
+
+        private static List<Station> GetBestStationList(Station[] stationList, string[] statesNeeded)
+        {
+            List<Station> BestStationList = new List<Station>();
+            int covered;
+            Station bestStation;
+            string[] statesUnCovered = new string[statesNeeded.Length];
+            for (int i = 0; i < statesNeeded.Length; i++)
+            {
+                statesUnCovered[i] = statesNeeded[i];
+            }
+            while (statesUnCovered.Length != 0)
+            {
+                covered = 0;
+                bestStation = null;
+                foreach (Station s in stationList)
+                {
+                    //foreach(string ss in (s.CoverArea.Intersect<string>(statesUnCovered)).ToArray())
+                    //{
+                    //    Console.Write(ss + " ");
+                    //}
+                    //Console.WriteLine();
+                    if (s.CoverArea.Intersect<string>(statesUnCovered).Count() > covered)
+                    {
+                        covered = s.CoverArea.Intersect<string>(statesUnCovered).Count();
+                        bestStation = s;
+                    }
+                }
+                BestStationList.Add(bestStation);
+                statesUnCovered = statesUnCovered.Except<string>(bestStation.CoverArea).ToArray();
+            }
+            return BestStationList;
+        }
+
+        private static ArrayList GetBestStationList_bak(ArrayList stationList, List<string> states)
+        {
+            ArrayList bestStationList = new ArrayList();
+            List<string> states_needed = new List<string>();
+            List<string> bestStation;
+            int covered;
+            foreach (string s in states)
+            {
+                states_needed.Add(s);
+            }
+            while (states_needed.Count != 0)
+            {
+                bestStation = null;
+                covered = 0;
+                foreach (List<string> ls in stationList)
+                {
+                    if (ls.Intersect<string>(states_needed).Count() > covered)
+                    {
+                        covered = ls.Intersect<string>(states_needed).Count();
+                        bestStation = ls;
+                    }
+                }
+                bestStationList.Add(bestStation);
+                states_needed = states_needed.Except<string>(bestStation).ToList();
+            }
+            return bestStationList;
+        }
+    }
+    //创建站点类
+    class Station
+    {
+        private string _name;
+        private string[] _coverArea;
+        public Station(string name)
+        {
+            _name = name;
+            _coverArea = null;
+        }
+        public string Name { get => _name; set => _name = value; }
+        public string[] CoverArea { get => _coverArea; set => _coverArea = value; }
     }
 }

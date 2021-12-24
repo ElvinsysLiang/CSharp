@@ -126,5 +126,14 @@ namespace DA00Forms
             }
             Console.WriteLine();
         }
+        public static void PrintList(List<int> vars)
+        {
+            Console.WriteLine("Print the list:");
+            foreach (var i in vars)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+        }
     }
 }
